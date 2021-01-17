@@ -58,6 +58,11 @@ h1
     color: #334455;
 }
 
+a:link, a:visited
+{
+    color: #334455;
+}
+
 em
 {
     font-style: normal;

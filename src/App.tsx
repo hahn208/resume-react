@@ -22,7 +22,7 @@ const experienceSet: ExperienceType[] = [
         'logo' : 'thrive.png',
         'position' : 'Full Stack Developer',
         'stint' : 'Sep 2015 – Present • Boise, Idaho',
-        'details' : 'Highlighted work: Ada County Idaho, Idaho Coalition Against Sexual & Domestic Violence, Lee Pesky Learning Center, Syringa Properties, various Boise State University projects.'
+        'details' : 'Highlighted work: Ada County Idaho, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, various Boise State projects.'
     },
     {
         'title' : 'Mattress Firm',
@@ -50,7 +50,7 @@ const experienceSet: ExperienceType[] = [
         'logo' : 'uptop.png',
         'position' : 'Software Engineer',
         'stint' : 'Jul 2006 – Feb 2012 • Boise, Idaho',
-        'details' : 'Large scale projects with Qwest (now CenturyLink) to build interactive Google Maps applications including the store locator. Various local and international projects.'
+        'details' : 'Large scale projects with CenturyLink. Interactive Google Maps applications (eg store locator). Various international projects.'
     }
 ];
 
@@ -131,7 +131,7 @@ function ResumeMain()
     return(
         <div className={'grid-area-experience'}>
             { bio.title }
-            <section><p>{bio.intro}</p></section>
+            <section><p>{bio.intro}</p><p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank">github.com/hahn208/resume-react</a></p></section>
             <h2><em>Experience</em></h2>
             { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
             <h2><em>Education</em></h2>
