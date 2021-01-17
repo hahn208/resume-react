@@ -1,0 +1,151 @@
+.App
+{
+    max-width: 1600px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 'sidebar experience';
+    column-gap: 30px;
+}
+
+.grid-area-sidebar
+{
+    width: 2.9in;
+    grid-area: sidebar;
+}
+
+.grid-area-experience
+{
+    grid-area: experience;
+}
+
+.skills-list
+{
+    padding: 0;
+    margin: 0 0 0.75rem 0;
+    list-style: none;
+}
+
+.skills-list > li
+{
+    display: inline-block;
+    background-color: #daf2e9;
+    border-radius: 4px;
+    padding: 0 3px;
+    margin: 0 2px;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'Fira Mono', monospace;
+}
+
+.no-spam
+{
+    display: none;
+}
+
+#AH
+{
+    float: left;
+    width: 72px;
+    margin-right: 16px;
+}
+
+h1
+{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding-bottom: 0;
+    margin-bottom: 0.6rem;
+    color: #334455;
+}
+
+em
+{
+    font-style: normal;
+    display: inline-block;
+}
+
+em::first-letter
+{
+    font-size: 120% !important;
+}
+
+@media print
+{
+    h1
+    {
+        margin-top: 0;
+    }
+}
+
+h1 > span { font-size: 2.1rem; }
+
+h2
+{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #334455;
+}
+
+h2 > span
+{
+    font-size: 1.9rem;
+}
+
+h3
+{
+    padding: 0;
+    margin: 0;
+}
+
+h4
+{
+    font-weight: 400;
+    color: #334455;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+
+h5
+{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+p {
+    padding: 0 0 0.5rem 0;
+    margin: 0;
+}
+
+section
+{
+    padding-top: 1rem;
+    margin-bottom: 0.4rem;
+    border-top: rgba(51, 68, 85, 0.4) solid 1px;
+    margin-top: 0.1rem;
+}
+
+.company-logo
+{
+    float: right;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: 0.5rem;
+}
+
+.company-logo > img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.work-details
+{
+    margin-top: 0.4rem;
+}
+

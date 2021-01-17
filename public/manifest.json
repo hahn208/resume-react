@@ -1,0 +1,15 @@
+{
+  "short_name": "React Resume",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "ah.png",
+      "type": "image/png",
+      "sizes": "151x111"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#334455",
+  "background_color": "#ffffff"
+}
