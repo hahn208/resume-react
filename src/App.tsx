@@ -80,10 +80,9 @@ const education: ExperienceType = {
 };
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'CSS3 & SCSS', 'JS', 'ES6', 'PHP', 'OOP', 'REST & SOAP', 'oAuth', 'MySQL', 'Linux & Apache', 'WordPress', 'WCAG', 'Photography'],
-    'new': ['React', 'TypeScript', 'NodeJS', 'MongoDB'],
-    'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Gulp', 'JetBrains', 'Confluence', 'Zeplin', 'Photoshop'],
-    'next': ['Python', 'Selenium']
+    'pro': ['HTML5', 'CSS3 & SCSS', 'JS', 'ES6', 'React', 'TypeScript', 'PHP7', 'OOP', 'REST & SOAP', 'oAuth', 'MySQL', 'Linux & Apache', 'WordPress', 'WCAG', 'Photography'],
+    'new': ['NodeJS', 'MongoDB', 'Python'],
+    'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Gulp', 'JetBrains', 'Confluence', 'Zeplin', 'Photoshop']
 };
 
 const bio: { [key: string]: string | object } = {
@@ -175,10 +174,6 @@ function Sidebar()
             <h5>Professional Tools</h5>
             <ul className='skills-list'>
                 {skillsOutput(skillSet.tools)}
-            </ul>
-            <h5>Next Skills</h5>
-            <ul className='skills-list'>
-                {skillsOutput(skillSet.next)}
             </ul>
             <h2><em>Volunteer</em> <em>Experience</em></h2>
             { volunteer.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
