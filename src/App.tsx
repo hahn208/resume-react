@@ -18,39 +18,39 @@ type ExperienceType = {
  */
 const experienceSet: ExperienceType[] = [
     {
-        'title' : 'Thrive Web Designs',
+        'title' : 'Thrive Web Designs (agency)',
         'logo' : 'thrive.png',
         'position' : 'Full Stack Developer',
         'stint' : 'Sep 2015 – Present • Boise, Idaho',
-        'details' : 'Highlighted work: Ada County Idaho, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, various Boise State projects.'
+        'details' : 'Fastened close relationships with clients. Piloted sites given concept/design to fully deployed mobile-first, ADA compliant, and PageInsights "A" rated. Adapted and extended the Wordpress platform to enrich client abilities. Exacted bugs on existing projects given no prior involvement or context, requiring deep-dive into vast range of code. Instituted personal coding standards and disciplines. Highlighted work: PBS Kids, Ada County Idaho, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, various Boise State University projects.'
     },
     {
         'title' : 'Mattress Firm',
         'logo' : 'mattressfirm.png',
         'position' : 'Software Engineer (Contract)',
         'stint' : 'Mar 2020 – Jul 2020 • Remote',
-        'details' : 'Enhanced CMS with components on HTML5, Liquid, SCSS, NodeJS, Webpack stack. Agile lifecycle. Onboarded replacement devs.'
+        'details' : 'Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, which enabled the marketing team to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract, immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, and on-boarded the two new hires that were my replacement.'
     },
     {
         'title' : 'CenturyLink',
         'logo' : 'centurylink.png',
         'position' : 'Frontend Developer',
         'stint' : 'Sep 2012 – Aug 2015 • Boise, Idaho',
-        'details' : 'Developed promos, retrofitted code, implemented A/B tests, support chat API interfacing. Scrum methodology. Onboarded offshore devs.'
+        'details' : 'Evolved codebase to eliminate dependencies on framework shims, decreasing sever technical debt and infrastructure fragility. Wrote user-stories for my Agile team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to cull high bounce rate by enacting image optimization, dismantling render blocking, eliminating code redundancies, and shedding dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and website tool to remove user interface snags on internal CMS and code repository program.'
     },
     {
         'title' : 'ShoutStage (now Vinyl)',
         'logo' : 'shoutstage.png',
         'position' : 'Software Engineer',
         'stint' : 'Mar 2012 – Aug 2012 • Boise, Idaho',
-        'details' : 'Cutting edge NodeJS and MongoDB work to build consolidated email and chat platform. Scrum methodology.'
+        'details' : 'Contributed to a consolidated communication platform with chat API integration. Assisted in driving technology decisions. Coordinated with design team for usability enhancements.Researched browser limitations. NodeJS 0.12.'
     },
     {
-        'title' : 'UpTop Corp',
+        'title' : 'UpTop Corp (agency)',
         'logo' : 'uptop.png',
         'position' : 'Software Engineer',
         'stint' : 'Jul 2006 – Feb 2012 • Boise, Idaho',
-        'details' : 'Large scale projects with CenturyLink. Interactive Google Maps applications (eg store locator). Various international projects.'
+        'details' : 'Owned high traffic projects with CenturyLink. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Various local and international projects.'
     }
 ];
 
@@ -60,7 +60,7 @@ const volunteer: ExperienceType[] = [
         'logo': 'redcross.png',
         'position': 'Blood Donor',
         'stint': '',
-        'details': 'I donate blood as often as eligible. As of Dec 2020 I have given over 2 liters of blood.'
+        'details': 'I donate blood as often as eligible. As of Feb 2021 I have given almost a gallon of blood.'
     },
     {
         'title' : 'GitHub',
@@ -76,20 +76,20 @@ const education: ExperienceType = {
     'logo': 'cofi.png',
     'position': 'Bachelors • Mathematics and Computer Science',
     'stint': '2002 – 2006 • Caldwell, Idaho',
-    'details': 'Tech committee. Outdoor program. P/T IT employee.'
+    'details': 'Proposed and negotiated creation of new student engineer positions in IT department. Served campus community by daylighting student organizations with websites, spearheaded school’s first online voting system, and established two new computer labs.'
 };
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'CSS3 & SCSS', 'JS', 'ES6', 'React', 'TypeScript', 'PHP7', 'OOP', 'REST & SOAP', 'oAuth', 'MySQL', 'Linux & Apache', 'WordPress', 'WCAG', 'Photography'],
+    'pro': ['HTML5', 'CSS3 & SCSS', 'JS', 'ES6', 'React', 'TypeScript', 'PHP7.4', 'OOP', 'REST & SOAP', 'oAuth', 'MySQL', 'Linux & Apache', 'WordPress', 'WCAG', 'Photography'],
     'new': ['NodeJS', 'MongoDB', 'Python'],
     'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Gulp', 'JetBrains', 'Confluence', 'Zeplin', 'Photoshop']
 };
 
 const bio: { [key: string]: string | object } = {
     'title': <h1><em>Andrew</em> <em>Hahn</em></h1>,
-    'intro': 'Professional web developer since 2004 • Developed scores of projects from design to production • DIYer, adventurer, and fatherer • Sourdough baker since before it was pandemic cool',
+    'intro': <p>Professional web developer since 2004 • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest / dorkiest child of the Hahn lineage.</p>,
     'logo': '',
-    'address': <p>Boise, Idaho<br/>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-5298</p>,
+    'address': <p>Boise, Idaho<br/>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98</p>,
     'slogan': <p>Endeavor with our <strong>heads together</strong>.</p>
 };
 
@@ -130,7 +130,7 @@ function ResumeMain()
     return(
         <div className={'grid-area-experience'}>
             { bio.title }
-            <section><p>{bio.intro}</p><p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank">github.com/hahn208/resume-react</a></p></section>
+            <section>{bio.intro}<p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank">github.com/hahn208/resume-react</a></p></section>
             <h2><em>Experience</em></h2>
             { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
             <h2><em>Education</em></h2>
