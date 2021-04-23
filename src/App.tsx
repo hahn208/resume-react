@@ -10,7 +10,8 @@ type ExperienceType = {
     logo: string,
     position: string,
     stint: string,
-    details: string
+    details: string,
+    forceWidow: boolean
 }
 
 /**
@@ -20,37 +21,42 @@ const experienceSet: ExperienceType[] = [
     {
         'title' : 'Thrive Web Designs (agency)',
         'logo' : 'thrive.png',
-        'position' : 'Full Stack Developer',
-        'stint' : 'Sep 2015 – Present • Boise, Idaho',
-        'details' : 'Fastened close relationships with clients. Piloted sites given concept/design to fully deployed mobile-first, ADA compliant, and PageInsights "A" rated. Adapted and extended the Wordpress platform to enrich client abilities. Exacted bugs on existing projects given no prior involvement or context, requiring deep-dive into vast range of code. Instituted personal coding standards and disciplines. Highlighted work: PBS Kids, Ada County Idaho, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, various Boise State University projects.'
+        'position' : 'Sr. Full Stack Developer',
+        'stint' : 'Sep 2015 – May 2021 • Boise, Idaho',
+        'details' : 'Fastened close relationships with clients. Piloted sites given concept / design to fully deployed mobile-first, ADA compliant, and PageInsights "A" rated. Adapted and extended the Wordpress platform to enrich client capabilities. Exacted bugs on brownfield projects. Instituted personal coding standards and disciplines. Tutored junior devs and new hires. Detailed setup and maintenance instructions for team collective knowledge capital. Highlighted work: PBS Kids, Ada County ID, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, Boise State University.',
+        'forceWidow': false
     },
     {
         'title' : 'Mattress Firm',
         'logo' : 'mattressfirm.png',
-        'position' : 'Software Engineer (Contract)',
+        'position' : 'Software Engineer (contract)',
         'stint' : 'Mar 2020 – Jul 2020 • Remote',
-        'details' : 'Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, which enabled the marketing team to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract, immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, and on-boarded the two new hires that were my replacement.'
+        'details' : 'Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, which enabled the marketing team to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract, immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, on-boarded two replacement hires.',
+        'forceWidow': false
     },
     {
         'title' : 'CenturyLink',
         'logo' : 'centurylink.png',
         'position' : 'Frontend Developer',
         'stint' : 'Sep 2012 – Aug 2015 • Boise, Idaho',
-        'details' : 'Evolved codebase to eliminate dependencies on framework shims, decreasing sever technical debt and infrastructure fragility. Wrote user-stories for my Agile team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to cull high bounce rate by enacting image optimization, dismantling render blocking, eliminating code redundancies, and shedding dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and website tool to remove user interface snags on internal CMS and code repository program.'
+        'details' : 'Evolved codebase to eliminate dependencies on framework shims, decreasing sever technical debt and infrastructure fragility. Wrote user-stories for my Agile team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to cull high bounce rate by enacting image optimization, dismantled render blocking, eliminated code redundancies, and shed dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and website tool to remove user interface snags on internal CMS and code repository program.',
+        'forceWidow': false
     },
     {
         'title' : 'ShoutStage (now Vinyl)',
         'logo' : 'shoutstage.png',
         'position' : 'Software Engineer',
         'stint' : 'Mar 2012 – Aug 2012 • Boise, Idaho',
-        'details' : 'Contributed to a consolidated communication platform with chat API integration. Assisted in driving technology decisions. Coordinated with design team for usability enhancements.Researched browser limitations. NodeJS 0.12.'
+        'details' : 'Contributed to a consolidated communication platform with chat API integration. Assisted in driving technology decisions. Coordinated with design team for usability enhancements.Researched browser limitations. NodeJS 0.12.',
+        'forceWidow': false
     },
     {
         'title' : 'UpTop Corp (agency)',
         'logo' : 'uptop.png',
         'position' : 'Software Engineer',
         'stint' : 'Jul 2006 – Feb 2012 • Boise, Idaho',
-        'details' : 'Owned high traffic projects with CenturyLink. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Various local and international projects.'
+        'details' : 'Owned high traffic projects with CenturyLink. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Various local and international projects.',
+        'forceWidow': false
     }
 ];
 
@@ -60,14 +66,16 @@ const volunteer: ExperienceType[] = [
         'logo': 'redcross.png',
         'position': 'Blood Donor',
         'stint': '',
-        'details': 'I donate blood as often as eligible. As of Feb 2021 I have given almost a gallon of blood.'
+        'details': 'I donate blood as often as eligible. As of Apr 2021 I have given one gallon of blood.',
+        'forceWidow': false
     },
     {
         'title' : 'GitHub',
         'logo': 'github.png',
         'position': 'Open Source Contributor',
         'stint': '',
-        'details': 'Reported issues and contributed code through pull requests.'
+        'details': 'Reported issues and contributed code through pull requests.',
+        'forceWidow': false
     }
 ];
 
@@ -76,7 +84,8 @@ const education: ExperienceType = {
     'logo': 'cofi.png',
     'position': 'Bachelors • Mathematics and Computer Science',
     'stint': '2002 – 2006 • Caldwell, Idaho',
-    'details': 'Proposed and negotiated creation of new student engineer positions in IT department. Served campus community by daylighting student organizations with websites, spearheaded school’s first online voting system, and established two new computer labs.'
+    'details': 'Proposed and negotiated creation of new student engineer positions in IT department. Served campus community by daylighting student organizations with websites, spearheaded school’s first online voting system, and established two new computer labs.',
+    'forceWidow': false
 };
 
 const skillSet: { [key: string]: string[] } = {
@@ -103,7 +112,7 @@ function ResumeItem(props: { experience: ExperienceType; })
     const experienceImage = require(`./images/${props.experience.logo}`).default;
 
     return(
-        <section>
+        <section className={ props.experience.forceWidow ? 'print-widow' : ''}>
             <div className="company-logo">
                 <img src={experienceImage} alt={props.experience.title} />
             </div>

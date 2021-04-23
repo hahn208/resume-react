@@ -9,7 +9,7 @@
 
 .grid-area-sidebar
 {
-    width: 2.8in;
+    width: 2.55in;
     grid-area: sidebar;
 }
 
@@ -79,6 +79,11 @@ em::first-letter
     h1
     {
         margin-top: 0;
+    }
+
+    .print-widow
+    {
+        page-break-before: always;
     }
 }
 
