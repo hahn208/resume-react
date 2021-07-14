@@ -19,6 +19,14 @@ type ExperienceType = {
  */
 const experienceSet: ExperienceType[] = [
     {
+        'title' : 'Mattress Firm',
+        'logo' : 'mattressfirm.png',
+        'position' : 'Front End Developer',
+        'stint' : 'May 2021 – Present • Remote',
+        'details' : 'Sought out by former manager to join staff. Assisting in the replatform to Dynamics 365 by contributing React & LESS. Continually encouraging team with code reviews, shared knowledge sessions, awful puns, and distributed workload. Providing department-wide support outside of assigned duties. Lead the charge to complete the web aspect of a fresh $32M marketing campaign.',
+        'forceWidow': false
+    },
+    {
         'title' : 'Thrive Web Designs (agency)',
         'logo' : 'thrive.png',
         'position' : 'Sr. Full Stack Developer',
@@ -32,7 +40,7 @@ const experienceSet: ExperienceType[] = [
         'position' : 'Software Engineer (contract)',
         'stint' : 'Mar 2020 – Jul 2020 • Remote',
         'details' : 'Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, which enabled the marketing team to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract, immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, on-boarded two replacement hires.',
-        'forceWidow': false
+        'forceWidow': true
     },
     {
         'title' : 'CenturyLink',
@@ -66,7 +74,7 @@ const volunteer: ExperienceType[] = [
         'logo': 'redcross.png',
         'position': 'Blood Donor',
         'stint': '',
-        'details': 'I donate blood as often as eligible. As of Apr 2021 I have given one gallon of blood.',
+        'details': 'I donate blood as often as eligible. As of June 2021 I have given over 4 liters of blood.',
         'forceWidow': false
     },
     {
@@ -89,9 +97,9 @@ const education: ExperienceType = {
 };
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'CSS3 & SCSS', 'JS', 'ES6', 'React', 'TypeScript', 'PHP7.4', 'OOP', 'REST & SOAP', 'oAuth', 'MySQL', 'Linux & Apache', 'WordPress', 'WCAG', 'Photography'],
+    'pro': ['HTML5', 'CSS3', 'SCSS', 'JS', 'ES6', 'React', 'TypeScript', 'PHP7.4', 'OOP', 'MySQL', 'REST & SOAP', 'oAuth', 'Linux', 'Apache', 'WordPress', 'WCAG', 'Photography'],
     'new': ['NodeJS', 'MongoDB', 'Python'],
-    'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Gulp', 'JetBrains', 'Confluence', 'Zeplin', 'Photoshop']
+    'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Gulp', 'JetBrains', 'Confluence', 'Azure', 'Zeplin', 'Figma', 'Photoshop']
 };
 
 const bio: { [key: string]: string | object } = {
@@ -140,10 +148,10 @@ function ResumeMain()
         <div className={'grid-area-experience'}>
             { bio.title }
             <section>{bio.intro}<p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank">github.com/hahn208/resume-react</a></p></section>
-            <h2><em>Experience</em></h2>
-            { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
             <h2><em>Education</em></h2>
             <ResumeItem experience={education}/>
+            <h2><em>Experience</em></h2>
+            { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
         </div>
     );
 }
@@ -172,6 +180,11 @@ function Sidebar()
     return (
         <div className={'grid-area-sidebar'}>
             <img src={require('./images/profile.jpg').default} alt="Andrew Hahn with son" style={{'width': '100%'}}/>
+            <section>
+                <img src={require('./images/ah.png').default} alt={'AH'} id={'AH'}/>
+                {bio.address}
+                {bio.slogan}
+            </section>
             <h5>Professional Skills</h5>
             <ul className='skills-list'>
                 {skillsOutput(skillSet.pro)}
@@ -186,11 +199,6 @@ function Sidebar()
             </ul>
             <h2><em>Volunteer</em> <em>Experience</em></h2>
             { volunteer.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
-            <section>
-                <img src={require('./images/ah.png').default} alt={'AH'} id={'AH'}/>
-                {bio.address}
-                {bio.slogan}
-            </section>
         </div>
     );
 }
