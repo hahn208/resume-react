@@ -23,7 +23,7 @@ const experienceSet: ExperienceType[] = [
         'logo' : 'mattressfirm.png',
         'position' : 'Front End Developer',
         'stint' : 'May 2021 – Present • Remote',
-        'details' : 'Sought out by former manager to join staff. Assisting in the replatform to Dynamics 365 by contributing React & LESS. Continually encouraging team with code reviews, shared knowledge sessions, awful puns, and distributed workload. Providing department-wide support outside of assigned duties. Lead the charge to complete the web aspect of a fresh $32M marketing campaign.',
+        'details' : 'Sought out by former manager to join staff. Assisting in the replatform to Dynamics 365 by contributing React & SASS. Continually encouraging team with code reviews, shared knowledge sessions, awful puns, and distributed workload. Providing department-wide support outside of assigned duties. Lead the charge to complete the web aspect of a fresh $32M marketing campaign.',
         'forceWidow': false
     },
     {
@@ -74,7 +74,7 @@ const volunteer: ExperienceType[] = [
         'logo': 'redcross.png',
         'position': 'Blood Donor',
         'stint': '',
-        'details': 'I donate blood as often as eligible. As of June 2021 I have given over 4 liters of blood.',
+        'details': 'I donate blood as often as eligible. As of Nov 2021 I have given over 5 liters of blood.',
         'forceWidow': false
     },
     {
@@ -97,8 +97,8 @@ const education: ExperienceType = {
 };
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'CSS3', 'SCSS', 'JS', 'ES6', 'React', 'TypeScript', 'PHP7.4', 'OOP', 'MySQL', 'REST & SOAP', 'oAuth', 'Linux', 'Apache', 'WordPress', 'WCAG', 'Photography'],
-    'new': ['NodeJS', 'MongoDB', 'Python'],
+    'pro': ['HTML5', 'CSS3', 'SCSS', 'JS', 'ES6', 'NodeJS', 'React', 'TypeScript', 'Jest', 'PHP7', 'OOP', 'MySQL', 'REST & SOAP', 'oAuth', 'Linux', 'Apache', 'WordPress', 'WCAG', 'Photography'],
+    'new': ['MongoDB', 'Python'],
     'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Gulp', 'JetBrains', 'Confluence', 'Azure', 'Zeplin', 'Figma', 'Photoshop']
 };
 
