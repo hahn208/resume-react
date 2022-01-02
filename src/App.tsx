@@ -21,9 +21,9 @@ const experienceSet: ExperienceType[] = [
     {
         'title' : 'Mattress Firm',
         'logo' : 'mattressfirm.png',
-        'position' : 'Front End Developer',
+        'position' : 'Development Team Lead',
         'stint' : 'May 2021 – Present • Remote',
-        'details' : 'Sought out by former manager to join staff. Assisting in the replatform to Dynamics 365 by contributing React & SASS. Continually encouraging team with code reviews, shared knowledge sessions, awful puns, and distributed workload. Providing department-wide support outside of assigned duties. Lead the charge to complete the web aspect of a fresh $32M marketing campaign.',
+        'details' : 'Heavy lifting the re-platform to Microsoft Dynamics 365. Providing department-wide support well outside of assigned duties. Owned the lifecycle of a new $32M marketing campaign. Marshaling tiger teams for low MTTR. Orchestrating cross-team efforts for mission critical product launches. Accelerating team with code reviews, shared knowledge sessions, awful puns, and distributed workload.',
         'forceWidow': false
     },
     {
@@ -74,7 +74,7 @@ const volunteer: ExperienceType[] = [
         'logo': 'redcross.png',
         'position': 'Blood Donor',
         'stint': '',
-        'details': 'I donate blood as often as eligible. As of Nov 2021 I have given over 5 liters of blood.',
+        'details': 'I donate blood as often as eligible. As of Dec 2021 I have given over 5 liters of blood.',
         'forceWidow': false
     },
     {
@@ -104,7 +104,7 @@ const skillSet: { [key: string]: string[] } = {
 
 const bio: { [key: string]: string | object } = {
     'title': <h1><em>Andrew</em> <em>Hahn</em></h1>,
-    'intro': <p>Professional web developer since 2004 • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest / dorkiest child of the Hahn lineage.</p>,
+    'intro': <p>Professional software developer since 2004 • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest / dorkiest child of the Hahn lineage.</p>,
     'logo': '',
     'address': <p>Boise, Idaho<br/>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98</p>,
     'slogan': <p>Endeavor with our <strong>heads together</strong>.</p>
@@ -147,7 +147,7 @@ function ResumeMain()
     return(
         <div className={'grid-area-experience'}>
             { bio.title }
-            <section>{bio.intro}<p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank">github.com/hahn208/resume-react</a></p></section>
+            <section>{bio.intro}<p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank" rel={"noreferrer"}>github.com/hahn208/resume-react</a></p></section>
             <h2><em>Education</em></h2>
             <ResumeItem experience={education}/>
             <h2><em>Experience</em></h2>
