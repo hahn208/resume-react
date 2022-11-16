@@ -21,9 +21,9 @@ const experienceSet: ExperienceType[] = [
     {
         'title' : 'Mattress Firm',
         'logo' : 'mattressfirm.png',
-        'position' : 'Development Team Lead',
+        'position' : 'Manager Software Engineering',
         'stint' : 'May 2021 – Present • Remote',
-        'details' : 'Heavy lifting the re-platform to Microsoft Dynamics 365. Providing department-wide support well outside of assigned duties. Owned the lifecycle of a new $32M marketing campaign. Marshaling tiger teams for low MTTR. Orchestrating cross-team efforts for mission critical product launches. Accelerating team with code reviews, shared knowledge sessions, awful puns, and distributed workload.',
+        'details' : 'Heavy lifted the re-platform from Salesforce to Microsoft D365. Carrying teams over obstacles both technical, theoretical, and personal. Marshaling tiger teams for triage of obscure and catastrophic challenges. Architecting the SDLC across multiple development teams. Orchestrating cross-team (FE, CRM, ERP, BI) efforts for mission critical feature launches. Accelerating team with code reviews, shared knowledge sessions, awful puns, and tools for enablement.',
         'forceWidow': false
     },
     {
@@ -74,7 +74,7 @@ const volunteer: ExperienceType[] = [
         'logo': 'redcross.png',
         'position': 'Blood Donor',
         'stint': '',
-        'details': 'I donate blood as often as eligible. As of Dec 2021 I have given over 5 liters of blood.',
+        'details': 'Starting from 2019, I have given over 7.5 liters of blood.',
         'forceWidow': false
     },
     {
@@ -82,7 +82,7 @@ const volunteer: ExperienceType[] = [
         'logo': 'github.png',
         'position': 'Open Source Contributor',
         'stint': '',
-        'details': 'Reported issues and contributed code through pull requests.',
+        'details': 'Logged issues and contributed resolutions through pull requests.',
         'forceWidow': false
     }
 ];
@@ -97,14 +97,14 @@ const education: ExperienceType = {
 };
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'CSS3', 'SCSS', 'JS', 'ES6', 'NodeJS', 'React', 'TypeScript', 'Jest', 'PHP7', 'OOP', 'MySQL', 'REST & SOAP', 'oAuth', 'Linux', 'Apache', 'WordPress', 'WCAG', 'Photography'],
+    'pro': ['HTML5', 'ES6', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP7', 'MySQL', 'REST', 'oAuth', 'Linux', 'WordPress', 'WCAG'],
     'new': ['MongoDB', 'Python'],
-    'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Gulp', 'JetBrains', 'Confluence', 'Azure', 'Zeplin', 'Figma', 'Photoshop']
+    'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Yarn', 'JetBrains', 'Jira', 'Azure', 'Figma', 'Photoshop']
 };
 
 const bio: { [key: string]: string | object } = {
     'title': <h1><em>Andrew</em> <em>Hahn</em></h1>,
-    'intro': <p>Professional software developer since 2004 • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest / dorkiest child of the Hahn lineage.</p>,
+    'intro': <p>Professional software engineer since 2004 • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest / dorkiest child of the Hahn lineage.</p>,
     'logo': '',
     'address': <p>Boise, Idaho<br/>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98</p>,
     'slogan': <p>Endeavor with our <strong>heads together</strong>.</p>
