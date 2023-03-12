@@ -23,7 +23,7 @@ const experienceSet: ExperienceType[] = [
         'logo' : 'mattressfirm.png',
         'position' : 'Manager Software Engineering',
         'stint' : 'May 2021 – Present • Remote',
-        'details' : 'Heavy lifted the re-platform from Salesforce to Microsoft D365. Carrying teams over obstacles both technical, theoretical, and personal. Marshaling tiger teams for triage of obscure and catastrophic challenges. Architecting the SDLC across multiple development teams. Orchestrating cross-team (FE, CRM, ERP, BI) efforts for mission critical feature launches. Accelerating team with code reviews, shared knowledge sessions, awful puns, and tools for enablement.',
+        'details' : 'Heavy lifted the re-platform from Salesforce to Microsoft D365 with individual contribution of React/SASS, diagramming multi-team dependencies, installing safety checks, and moving the nuclear football from the legacy system to the new platform. Carrying teams over obstacles both technical, abstract, and personal. Sussed-out lurking issues quietly impacting millions in annual revenue. Marshaling tiger teams for triage of obscure and catastrophic challenges by reading the tea-leaves of hand-tailored logging. Forged the SDLC across multiple development teams and continue to pilot weekly launches. Orchestrating cross-team (FE, CRM, ERP, BI, accounting) efforts for mission critical feature launches, perfecting alignment of impacted systems. Accelerating teams with code reviews, shared knowledge sessions, tools for enablement, and awful puns.',
         'forceWidow': false
     },
     {
@@ -74,7 +74,7 @@ const volunteer: ExperienceType[] = [
         'logo': 'redcross.png',
         'position': 'Blood Donor',
         'stint': '',
-        'details': 'Starting from 2019, I have given over 7.5 liters of blood.',
+        'details': 'Starting from 2019, I have given over 8.5 liters of blood.',
         'forceWidow': false
     },
     {
