@@ -38,12 +38,12 @@ const experienceSet: ExperienceType[] = [
         'title' : 'Mattress Firm',
         'logo' : 'mattressfirm.png',
         'position' : 'Software Engineer (contract)',
-        'stint' : 'Mar 2020 – Jul 2020 • Remote',
+        'stint' : 'Feb 2020 – Aug 2020 • Remote',
         'details' : 'Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, enabling the marketing and operations teams to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract: Immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, on-boarded two replacement hires.',
         'forceWidow': false
     },
     {
-        'title' : 'CenturyLink',
+        'title' : 'CenturyLink (now Lumen telecom)',
         'logo' : 'centurylink.png',
         'position' : 'Frontend Developer',
         'stint' : 'Sep 2012 – Aug 2015 • Boise, Idaho',
@@ -63,7 +63,7 @@ const experienceSet: ExperienceType[] = [
         'logo' : 'uptop.png',
         'position' : 'Software Engineer',
         'stint' : 'Jul 2006 – Feb 2012 • Boise, Idaho',
-        'details' : 'Owned high traffic projects with CenturyLink. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Various local and international projects.',
+        'details' : 'Owned high traffic projects with CenturyLink telecom. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Various local and international projects.',
         'forceWidow': false
     }
 ];
