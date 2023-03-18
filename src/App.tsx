@@ -21,9 +21,9 @@ const experienceSet: ExperienceType[] = [
     {
         'title' : 'Mattress Firm',
         'logo' : 'mattressfirm.png',
-        'position' : 'Manager Software Engineering',
+        'position' : 'Software Engineering Manager',
         'stint' : 'May 2021 – Present • Remote',
-        'details' : 'Heavy lifted the re-platform from Salesforce to Microsoft D365 with individual contribution of React/SASS, diagramming multi-team dependencies, installing safety checks, and moving the nuclear football from the legacy system to the new platform. Carrying teams over obstacles both technical, abstract, and personal. Sussed-out lurking issues quietly impacting millions in annual revenue. Marshaling tiger teams for triage of obscure and catastrophic challenges by reading the tea-leaves of hand-tailored logging. Forged the SDLC across multiple development teams and continue to pilot weekly launches. Orchestrating cross-team (FE, CRM, ERP, BI, accounting) efforts for mission critical feature launches, perfecting alignment of impacted systems. Accelerating teams with code reviews, shared knowledge sessions, tools for enablement, and awful puns.',
+        'details' : 'Engineering manager and tech-lead for multiple teams. Heavy lifted the re-platform from Salesforce to Microsoft D365 with individual contribution of React/SASS, diagramming multi-team dependencies, installing safety checks, and moving the nuclear football from the legacy system to the new platform. Carrying teams over obstacles both technical, abstract, and personal. Sussed-out lurking issues quietly impacting millions in annual revenue. Marshaling tiger teams to triage and stem obscure and catastrophic challenges by reading the tea-leaves of hand-tailored logging. Forged the SDLC across multiple development teams and continue to pilot weekly launches. Orchestrating cross-team (CRM, ERP, BI, F&O) efforts for mission critical feature launches, perfecting alignment of impacted systems. Accelerating teams with code reviews, shared knowledge sessions, tools for enablement, and awful puns.',
         'forceWidow': false
     },
     {
@@ -39,15 +39,15 @@ const experienceSet: ExperienceType[] = [
         'logo' : 'mattressfirm.png',
         'position' : 'Software Engineer (contract)',
         'stint' : 'Mar 2020 – Jul 2020 • Remote',
-        'details' : 'Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, which enabled the marketing team to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract, immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, on-boarded two replacement hires.',
-        'forceWidow': true
+        'details' : 'Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, enabling the marketing and operations teams to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract: Immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, on-boarded two replacement hires.',
+        'forceWidow': false
     },
     {
         'title' : 'CenturyLink',
         'logo' : 'centurylink.png',
         'position' : 'Frontend Developer',
         'stint' : 'Sep 2012 – Aug 2015 • Boise, Idaho',
-        'details' : 'Evolved codebase to eliminate dependencies on framework shims, decreasing sever technical debt and infrastructure fragility. Wrote user-stories for my Agile team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to cull high bounce rate by enacting image optimization, dismantled render blocking, eliminated code redundancies, and shed dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and website tool to remove user interface snags on internal CMS and code repository program.',
+        'details' : 'Evolved codebase to eliminate dependencies on framework shims, decreasing severe technical debt and infrastructure fragility. Authored user-stories for Scrum team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to cull high bounce rate by enacting image optimization, dismantled render blocking, eliminated code redundancies, and shed dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and site tool to remove user interface snags on internal CMS and code repository program.',
         'forceWidow': false
     },
     {
@@ -55,7 +55,7 @@ const experienceSet: ExperienceType[] = [
         'logo' : 'shoutstage.png',
         'position' : 'Software Engineer',
         'stint' : 'Mar 2012 – Aug 2012 • Boise, Idaho',
-        'details' : 'Contributed to a consolidated communication platform with chat API integration. Assisted in driving technology decisions. Coordinated with design team for usability enhancements.Researched browser limitations. NodeJS 0.12.',
+        'details' : 'Contributed to a consolidated communication platform with chat API integrations. Drove technology decisions. Heavily researched browser limitations. Bleeding edge work in NodeJS 0.12 and MongoDB.',
         'forceWidow': false
     },
     {
@@ -74,7 +74,7 @@ const volunteer: ExperienceType[] = [
         'logo': 'redcross.png',
         'position': 'Blood Donor',
         'stint': '',
-        'details': 'Starting from 2019, I have given over 8.5 liters of blood.',
+        'details': 'Since 2019, I have given over 8.5 liters of blood.',
         'forceWidow': false
     },
     {
