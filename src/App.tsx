@@ -22,8 +22,8 @@ const experienceSet: ExperienceType[] = [
         'title' : 'Mattress Firm',
         'logo' : 'mattressfirm.png',
         'position' : 'Software Engineering Manager',
-        'stint' : 'May 2021 – Present • Remote',
-        'details' : 'Engineering manager and tech-lead for multiple teams. Heavy lifted the re-platform from Salesforce to Microsoft D365 with individual contribution of React/SASS, diagramming multi-team dependencies, installing safety checks, and moving the nuclear football from the legacy system to the new platform. Carrying teams over obstacles both technical, abstract, and personal. Sussed-out lurking issues quietly impacting millions in annual revenue. Marshaling tiger teams to triage and stem obscure and catastrophic revenue bleed by reading the tea-leaves of hand-tailored logging & monitoring. Forged the SDLC across multiple development teams and continue to pilot weekly launches. Orchestrating cross-team (CRM, ERP, BI, F&O) efforts for mission critical feature launches, perfecting alignment of impacted systems. Accelerating teams with code reviews, shared knowledge sessions, tools for enablement, and awful puns.',
+        'stint' : 'May 2021 – Jun 2023 • Remote',
+        'details' : 'Engineering manager and tech-lead for multiple teams. Heavy lifted the re-platform from Salesforce to Microsoft D365 with individual contribution of React/SASS, diagramming multi-team dependencies, installing safety checks, and masterfully channeled torrent of customers from the legacy system to the new platform. Carrying teams over obstacles both technical, abstract, and personal. Sussed-out lurking issues quietly impacting millions in annual revenue. Marshaling tiger teams to triage and stem catastrophic revenue bleed. Forged the SDLC across multiple development teams and continue to pilot weekly launches. Orchestrating cross-team (CRM, ERP, BI, F&O) efforts for mission critical feature launches, perfecting alignment of impacted systems. Accelerating teams with code reviews, shared knowledge sessions, tools for enablement, and awful puns.',
         'forceWidow': false
     },
     {
@@ -117,7 +117,7 @@ const bio: { [key: string]: string | object } = {
  */
 function ResumeItem(props: { experience: ExperienceType; })
 {
-    const experienceImage = require(`./images/${props.experience.logo}`).default;
+    const experienceImage = require(`./images/${props.experience.logo}`);
 
     return(
         <section className={ props.experience.forceWidow ? 'print-widow' : ''}>
@@ -146,12 +146,18 @@ function ResumeMain()
 {
     return(
         <div className={'grid-area-experience'}>
-            { bio.title }
-            <section>{bio.intro}<p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank" rel={"noreferrer"}>github.com/hahn208/resume-react</a></p></section>
-            <h2><em>Education</em></h2>
-            <ResumeItem experience={education}/>
-            <h2><em>Experience</em></h2>
-            { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
+            <>
+                { bio.title }
+                <section>
+                    <>
+                        {bio.intro}<p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank" rel={"noreferrer"}>github.com/hahn208/resume-react</a></p>
+                    </>
+                </section>
+                <h2><em>Education</em></h2>
+                <ResumeItem experience={education}/>
+                <h2><em>Experience</em></h2>
+                { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
+            </>
         </div>
     );
 }
@@ -179,11 +185,13 @@ function Sidebar()
 
     return (
         <div className={'grid-area-sidebar'}>
-            <img src={require('./images/profile.jpg').default} alt="Andrew Hahn with son" style={{'width': '100%'}}/>
+            <img src={require('./images/profile.jpg')} alt="Andrew Hahn with son" style={{'width': '100%'}}/>
             <section>
-                <img src={require('./images/ah.png').default} alt={'AH'} id={'AH'}/>
-                {bio.address}
-                {bio.slogan}
+                <>
+                    <img src={require('./images/ah.png')} alt={'AH'} id={'AH'}/>
+                    {bio.address}
+                    {bio.slogan}
+                </>
             </section>
             <h5>Professional Skills</h5>
             <ul className='skills-list'>
