@@ -6,7 +6,7 @@ html
   line-height: 1.35rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 8.5in;
+  max-width: 8.5in;
   margin: 0 auto;
   padding-top: 2px;
   background-color: white;

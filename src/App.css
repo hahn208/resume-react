@@ -3,14 +3,37 @@
     max-width: 1600px;
     margin: auto;
     display: grid;
-    grid-template-areas: 'sidebar experience';
+    grid-template-areas:
+        'bio'
+        'sidebar'
+        'experience';
     column-gap: 30px;
 }
 
 .grid-area-sidebar
 {
-    width: 2.55in;
     grid-area: sidebar;
+}
+
+
+@media (min-width: 1024px)
+{
+    .App
+    {
+        grid-template-areas:
+        'sidebar bio'
+        'sidebar experience';
+    }
+
+    .grid-area-sidebar
+    {
+        width: 2.55in;
+    }
+}
+
+.grid-area-bio
+{
+    grid-area: bio;
 }
 
 .grid-area-experience

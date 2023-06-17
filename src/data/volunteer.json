@@ -1,0 +1,18 @@
+[
+    {
+        "title": "American Red Cross",
+        "logo": "redcross.png",
+        "position": "Blood Donor",
+        "stint": "",
+        "details": "Since 2019, I have given over 8.5 liters of blood.",
+        "forceWidow": false
+    },
+    {
+        "title": "GitHub",
+        "logo": "github.png",
+        "position": "Open Source Contributor",
+        "stint": "",
+        "details": "Logged issues and contributed resolutions through pull requests.",
+        "forceWidow": false
+    }
+]

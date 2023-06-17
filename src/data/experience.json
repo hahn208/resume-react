@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Mattress Firm",
+        "logo": "mattressfirm.png",
+        "position": "Software Engineering Manager",
+        "stint": "May 2021 – Jun 2023 • Remote",
+        "details": "Engineering manager and tech-lead for multiple teams. Heavy lifted the re-platform from Salesforce to Microsoft D365 with individual contribution of React/SASS, diagramming multi-team dependencies, installing safety checks, and masterfully channeled torrent of customers from the legacy system to the new platform. Carrying teams over obstacles both technical, abstract, and personal. Sussed-out lurking issues quietly impacting millions in annual revenue. Marshaling tiger teams to triage and stem catastrophic revenue bleed. Forged the SDLC across multiple development teams and continue to pilot weekly launches. Orchestrating cross-team (CRM, ERP, BI, F&O) efforts for mission critical feature launches, perfecting alignment of impacted systems. Accelerating teams with code reviews, shared knowledge sessions, tools for enablement, and awful puns.",
+        "forceWidow": false
+    },
+    {
+        "title": "Thrive Web Designs (agency)",
+        "logo": "thrive.png",
+        "position": "Sr. Full Stack Developer",
+        "stint": "Sep 2015 – May 2021 • Boise, Idaho",
+        "details": "Fastened close relationships with clients. Piloted sites given concept / design to fully deployed mobile-first, ADA compliant, and PageInsights \"A\" rated. With object oriented PHP, custom MySQL queries & stored procedures, SASS, class-based ES6 JS, and HTML5 the Wordpress platform was adapted and extended to enrich client capabilities. Exacted bugs on some of the worst greenfield projects imaginable. Instituted personal coding standards and disciplines. Mentored junior devs and new hires. Detailed setup and maintenance instructions for team collective knowledge capital, ie critical backup systems, massive data batch processing, and deployment playbooks. Highlighted work: PBS Kids, Ada County ID, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, Boise State University.",
+        "forceWidow": false
+    },
+    {
+        "title": "Mattress Firm",
+        "logo": "mattressfirm.png",
+        "position": "Software Engineer (contract)",
+        "stint": "Feb 2020 – Aug 2020 • Remote",
+        "details": "Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, enabling the marketing and operations teams to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract: Immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, on-boarded two replacement hires.",
+        "forceWidow": false
+    },
+    {
+        "title": "CenturyLink (now Lumen telecom)",
+        "logo": "centurylink.png",
+        "position": "Frontend Developer",
+        "stint": "Sep 2012 – Aug 2015 • Boise, Idaho",
+        "details": "Evolved codebase to eliminate dependencies on framework shims, decreasing severe technical debt and infrastructure fragility. Authored user-stories for Scrum team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to cull high bounce rate by enacting image optimization, dismantled render blocking, eliminated code redundancies, and shed dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and site tool to remove user interface snags on internal CMS and code repository program.",
+        "forceWidow": false
+    },
+    {
+        "title": "ShoutStage (now Vinyl)",
+        "logo": "shoutstage.png",
+        "position": "Software Engineer",
+        "stint": "Mar 2012 – Aug 2012 • Boise, Idaho",
+        "details": "Contributed to a consolidated communication platform with chat API integrations. Drove technology decisions. Heavily researched browser limitations. Bleeding edge work in NodeJS 0.12 and MongoDB.",
+        "forceWidow": false
+    },
+    {
+        "title": "UpTop Corp (agency)",
+        "logo": "uptop.png",
+        "position": "Software Engineer",
+        "stint": "Jul 2006 – Feb 2012 • Boise, Idaho",
+        "details": "Owned high traffic projects with CenturyLink telecom. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Various local and international projects.",
+        "forceWidow": false
+    }
+]
