@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React, {Suspense} from 'react';
+import './App.scss';
 
 /**
  * TODO: SCSS & Gulp, JSDoc, tests
@@ -135,11 +135,13 @@ function Sidebar()
         <div className={'grid-area-sidebar'}>
             <img src={require('./images/profile.jpg')} alt="Andrew Hahn with son" style={{'width': '100%'}}/>
             <section>
-                <>
-                    <img src={require('./images/ah.png')} alt={'AH'} id={'AH'}/>
-                    {bio.address}
-                    {bio.slogan}
-                </>
+                <Suspense>
+                    <>
+                        <img src={require('./images/ah.png')} alt={'AH'} id={'AH'}/>
+                        {bio.address}
+                        {bio.slogan}
+                    </>
+                </Suspense>
             </section>
             <h5>Professional Skills</h5>
             <ul className='skills-list'>

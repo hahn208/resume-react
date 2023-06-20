@@ -1,6 +1,13 @@
+$font-color: #334455;
+$accent-color-primary: #daf2e9;
+
+$media-breakpoint-sm: 768px;
+$media-breakpoint-md: 1024px;
+$media-breakpoint-lg: 1600px;
+
 .App
 {
-    max-width: 1600px;
+    max-width: $media-breakpoint-lg;
     margin: auto;
     display: grid;
     grid-template-areas:
@@ -17,7 +24,7 @@
 }
 
 
-@media (min-width: 1024px)
+@media (min-width: $media-breakpoint-md)
 {
     .App
     {
@@ -52,7 +59,7 @@
 .skills-list > li
 {
     display: inline-block;
-    background-color: #daf2e9;
+    background-color: $accent-color-primary;
     border-radius: 0.3rem;
     padding: 0 0.2rem;
     margin: 0 0.2rem;
@@ -79,12 +86,12 @@ h1
     text-transform: uppercase;
     padding-bottom: 0;
     margin-bottom: 0.6rem;
-    color: #334455;
+    color: $font-color;
 }
 
 a:link, a:visited
 {
-    color: #334455;
+    color: $font-color;
 }
 
 em
@@ -118,7 +125,7 @@ h2
     font-size: 1.5rem;
     text-transform: uppercase;
     margin-bottom: 0;
-    color: #334455;
+    color: $font-color;
 }
 
 h2 > span
@@ -135,7 +142,7 @@ h3
 h4
 {
     font-weight: 400;
-    color: #334455;
+    color: $font-color;
     padding: 0;
     margin: 0;
     font-size: 0.8rem;
