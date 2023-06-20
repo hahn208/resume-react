@@ -52,7 +52,7 @@ function ResumeItem(props: { experience: ExperienceType; })
     const experienceImage = require(`./images/${props.experience.logo}`);
 
     return(
-        <section className={ props.experience.forceWidow ? 'print-widow' : ''}>
+        <section className={ props.experience.forceWidow ? 'print-widow' : undefined }>
             <div className="company-logo">
                 <img src={experienceImage} alt={props.experience.title} />
             </div>

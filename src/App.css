@@ -7,7 +7,8 @@
         'bio'
         'sidebar'
         'experience';
-    column-gap: 30px;
+    column-gap: 1.8rem;
+    padding: 0 1rem 1rem;
 }
 
 .grid-area-sidebar
@@ -52,11 +53,11 @@
 {
     display: inline-block;
     background-color: #daf2e9;
-    border-radius: 4px;
-    padding: 0 3px;
-    margin: 0 2px;
-    font-size: 13px;
-    line-height: 18px;
+    border-radius: 0.3rem;
+    padding: 0 0.2rem;
+    margin: 0 0.2rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
     font-family: 'Fira Mono', monospace;
 }
 
