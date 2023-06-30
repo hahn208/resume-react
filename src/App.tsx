@@ -54,7 +54,7 @@ function ResumeItem(props: { experience: ExperienceType; })
     return(
         <section className={ props.experience.forceWidow ? 'print-widow' : undefined }>
             <div className="company-logo">
-                <img src={experienceImage} alt={props.experience.title} />
+                <img src={experienceImage} className={"company-logo_img"} alt={props.experience.title} />
             </div>
             <div className="background-section">
                 <h3>{props.experience.position}</h3>
