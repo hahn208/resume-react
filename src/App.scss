@@ -114,6 +114,11 @@ section
     {
         page-break-before: always;
     }
+    
+    .d-print-none
+    {
+        display: none !important;
+    }
 }
 
 .App
@@ -132,6 +137,12 @@ section
 .grid-area-sidebar
 {
     grid-area: sidebar;
+    
+    .company-logo
+    {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media print {

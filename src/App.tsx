@@ -53,15 +53,15 @@ function ResumeItem(props: { experience: ExperienceType; })
 
     return(
         <section className={ props.experience.forceWidow ? 'print-widow' : undefined }>
-            <div className="company-logo">
-                <img src={experienceImage} className={"company-logo_img"} alt={props.experience.title} />
+            <div className='company-logo'>
+                <img src={experienceImage} className={'company-logo_img'} alt={props.experience.title}/>
             </div>
-            <div className="background-section">
+            <div className='background-section'>
                 <h3>{props.experience.position}</h3>
                 <p>{props.experience.title}</p>
                 <h4>{props.experience.stint}</h4>
             </div>
-            <div className="work-details">
+            <div className='work-details'>
                 <p>{props.experience.details}</p>
             </div>
         </section>
@@ -100,7 +100,7 @@ function ResumeBio()
                 { bio.title }
                 <section>
                     <>
-                        {bio.intro}<p>View Source: <a href="https://github.com/hahn208/resume-react" target="_blank" rel={"noreferrer"}>github.com/hahn208/resume-react</a></p>
+                        {bio.intro}<p>View Source: <a href='https://github.com/hahn208/resume-react' target='_blank' rel={'noreferrer'}>github.com/hahn208/resume-react</a></p>
                     </>
                 </section>
             </>
@@ -133,7 +133,7 @@ function Sidebar()
 
     return (
         <div className={'grid-area-sidebar'}>
-            <img src={require('./images/profile.jpg')} alt="Andrew Hahn with son" style={{'width': '100%'}}/>
+            <img src={require('./images/profile.jpg')} alt='Andrew Hahn with son' className={'d-print-none'} style={{'width': '100%'}}/>
             <section>
                 <Suspense>
                     <>
@@ -169,7 +169,7 @@ function Sidebar()
 function App() 
 {
     return (
-        <div className="App">
+        <div className='App'>
             <Sidebar/>
             <ResumeBio/>
             <ResumeExperience/>
