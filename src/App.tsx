@@ -1,9 +1,5 @@
-import React, {Suspense} from 'react';
+import {memo, MutableRefObject, useEffect, useRef, useState} from 'react';
 import './App.scss';
-
-/**
- * TODO: SCSS & Gulp, JSDoc, tests
- */
 
 type ExperienceType = {
     title: string,
@@ -31,7 +27,7 @@ const education: ExperienceType[] = require('./data/education.json');
 
 const skillSet: { [key: string]: string[] } = {
     'pro': ['HTML5', 'ES6', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP7', 'MySQL', 'REST', 'oAuth', 'Linux', 'WordPress', 'WCAG'],
-    'new': ['MongoDB', 'Python'],
+    'new': ['MongoDB', 'Python', 'Tailwind'],
     'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Yarn', 'JetBrains', 'Jira', 'Azure', 'Figma', 'Photoshop']
 };
 
@@ -41,6 +37,19 @@ const bio: { [key: string]: object } = {
     'address': <p>Boise, Idaho<br/>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98</p>,
     'slogan': <p>Endeavor with our <strong>heads together</strong>.</p>
 };
+
+/**
+ * Given a string, remove any non-alphanum characters and replace with a hyphen.
+ * @param rawString The unsanitized string.
+ * @return string
+ */
+const makeSafeKeyString = (rawString: string) => rawString.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+
+/**
+ * Return the current time, to the minute only, in Boise.
+ * @return string
+ */
+const getIdahoTime = () => new Date().toLocaleString('en-US', { timeZone: 'America/Boise', hour: '2-digit', minute:'2-digit' }); 
 
 /**
  *
@@ -108,7 +117,32 @@ function ResumeBio()
     )
 }
 
-
+// TODO: Convert to context? https://react.dev/reference/react/memo#updating-a-memoized-component-using-a-context
+const IdahoTime = memo(
+    function IdahoTime()
+    {
+        // Create a ref for the interval timer so it can be cleared later.
+        let idahoTimePendulum: MutableRefObject<NodeJS.Timer | false> = useRef(false);
+        
+        /* Create a state variable and setter for the time display */
+        const [idahoTime, setIdahoTime] = useState(getIdahoTime());
+        
+        // Avoid rendering the time before hydration. Only run once.
+        useEffect(
+            () => {
+                // In Dev mode this might render twice. Prevent multiple intervals from being created.
+                if(!idahoTimePendulum.current)
+                    idahoTimePendulum.current = setInterval(() => { console.log('iran');setIdahoTime(getIdahoTime()) }, 5000);
+                
+                // Return a callback function when the component is unmounted so the interval is cleared.
+                return () => { console.log('unmount'); clearInterval(~~idahoTimePendulum.current); idahoTimePendulum.current = false; };
+            },
+            [idahoTime]
+        );
+        
+        return <span>{ idahoTime }</span>;
+    }
+)
 
 /**
  * Sidebar
@@ -125,9 +159,7 @@ function Sidebar()
      */
     let skillsOutput = (skillSet: Array<string>) => (
         skillSet.map(
-            (skill: string) => {
-                return <li>{skill}</li>;
-            }
+            (skill: string) => <li key={makeSafeKeyString(skill)}>{skill}</li>
         )
     );
 
@@ -135,13 +167,12 @@ function Sidebar()
         <div className={'grid-area-sidebar'}>
             <img src={require('./images/profile.jpg')} alt='Andrew Hahn with son' className={'d-print-none'} style={{'width': '100%'}}/>
             <section>
-                <Suspense>
-                    <>
-                        <img src={require('./images/ah.png')} alt={'AH'} id={'AH'}/>
-                        {bio.address}
-                        {bio.slogan}
-                    </>
-                </Suspense>
+                <>
+                    <img src={require('./images/ah.png')} alt={'AH'} id={'AH'}/>
+                    {bio.address} &#x1F556;
+                    <IdahoTime />
+                    {bio.slogan}
+                </>
             </section>
             <h5>Professional Skills</h5>
             <ul className='skills-list'>
