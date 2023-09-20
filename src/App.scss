@@ -101,6 +101,11 @@ section
     margin-top: 0.1rem;
 }
 
+.d-print
+{
+    display: none;
+}
+
 @media print
 {
     h1
@@ -114,10 +119,20 @@ section
     {
         page-break-before: always;
     }
+
+    .d-print
+    {
+        display: inline-block;
+    }
     
     .d-print-none
     {
         display: none !important;
+    }
+
+    .print-t-0
+    {
+        padding-top: 0;
     }
 }
 
@@ -213,7 +228,7 @@ section
 {
     float: left;
     width: 72px;
-    margin-right: 16px;
+    height: 100%;
 }
 
 .company-logo
@@ -234,4 +249,19 @@ section
 .work-details
 {
     margin-top: 0.4rem;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.justify-between
+{
+    justify-content: space-between;
+}
+
+.gap-4
+{
+    gap: 1rem;
 }

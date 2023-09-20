@@ -1,14 +1,14 @@
-import {memo, MutableRefObject, useEffect, useRef, useState} from 'react';
+import {memo, MutableRefObject, ReactNode, useEffect, useRef, useState} from 'react';
 import './App.scss';
 
-type ExperienceType = {
+interface ExperienceType {
     title: string,
     logo: string,
     position: string,
     stint: string,
     details: string,
     forceWidow: boolean
-};
+}
 
 /**
  * Import the work experience json.
@@ -31,11 +31,11 @@ const skillSet: { [key: string]: string[] } = {
     'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Yarn', 'JetBrains', 'Jira', 'Azure', 'Figma', 'Photoshop']
 };
 
-const bio: { [key: string]: object } = {
+const bio: { [key: string]: ReactNode } = {
     'title': <h1><em>Andrew</em> <em>Hahn</em></h1>,
     'intro': <p>Professional software engineer since 2004 • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest / dorkiest child of the Hahn lineage.</p>,
-    'address': <p>Boise, Idaho<br/>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98</p>,
-    'slogan': <p>Endeavor with our <strong>heads together</strong>.</p>
+    'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98<br/>Boise, Idaho USA</span>,
+    'slogan': <p><strong>Heads together</strong> we endeavor.</p>
 };
 
 /**
@@ -49,7 +49,7 @@ const makeSafeKeyString = (rawString: string) => rawString.replace(/[^a-z0-9]/gi
  * Return the current time, to the minute only, in Boise.
  * @return string
  */
-const getIdahoTime = () => new Date().toLocaleString('en-US', { timeZone: 'America/Boise', hour: '2-digit', minute:'2-digit' }); 
+const getIdahoTime = () => new Intl.DateTimeFormat('en-GB', { month: 'short', day: 'numeric', year:'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'America/Boise' }).format(new Date()); 
 
 /**
  *
@@ -121,7 +121,7 @@ function ResumeBio()
 const IdahoTime = memo(
     function IdahoTime()
     {
-        // Create a ref for the interval timer so it can be cleared later.
+        // Create a ref for the interval timer, so it can be cleared later.
         let idahoTimePendulum: MutableRefObject<NodeJS.Timer | false> = useRef(false);
         
         /* Create a state variable and setter for the time display */
@@ -132,15 +132,15 @@ const IdahoTime = memo(
             () => {
                 // In Dev mode this might render twice. Prevent multiple intervals from being created.
                 if(!idahoTimePendulum.current)
-                    idahoTimePendulum.current = setInterval(() => { console.log('iran');setIdahoTime(getIdahoTime()) }, 5000);
+                    idahoTimePendulum.current = setInterval(() => { setIdahoTime(getIdahoTime()) }, 5000);
                 
                 // Return a callback function when the component is unmounted so the interval is cleared.
-                return () => { console.log('unmount'); clearInterval(~~idahoTimePendulum.current); idahoTimePendulum.current = false; };
+                return () => { clearInterval(~~idahoTimePendulum.current); idahoTimePendulum.current = false; };
             },
             [idahoTime]
         );
         
-        return <span>{ idahoTime }</span>;
+        return <span className={'d-print-none'}>{ idahoTime }</span>;
     }
 )
 
@@ -166,13 +166,18 @@ function Sidebar()
     return (
         <div className={'grid-area-sidebar'}>
             <img src={require('./images/profile.jpg')} alt='Andrew Hahn with son' className={'d-print-none'} style={{'width': '100%'}}/>
-            <section>
-                <>
+            <section className={'print-t-0'}>
+                <div className={'flex gap-4'}>
                     <img src={require('./images/ah.png')} alt={'AH'} id={'AH'}/>
-                    {bio.address} &#x1F556;
-                    <IdahoTime />
-                    {bio.slogan}
-                </>
+                    <div>
+                        <p>
+                            {bio.address}<br/>
+                            <IdahoTime/>
+                            <span className={'d-print'}>Mountain Time Zone</span>
+                        </p>
+                    </div>
+                </div>
+                {bio.slogan}
             </section>
             <h5>Professional Skills</h5>
             <ul className='skills-list'>
