@@ -2,7 +2,7 @@
   "name": "hahn-resume",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://www.idahohahn.com/Resume/",
+  "homepage": "https://www.idahohahn.com/Resume/React/",
   "dependencies": {
     "@testing-library/react": "^14.0.0",
     "react": "^18.2.0",
