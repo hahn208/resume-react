@@ -2,9 +2,9 @@ import {memo, MutableRefObject, ReactNode, useEffect, useRef, useState} from 're
 import './App.scss';
 
 interface ExperienceType {
-    title: string,
-    logo: string,
-    position: string,
+    title?: string,
+    logo?: string,
+    position?: string,
     stint: string,
     details: string,
     forceWidow: boolean
@@ -27,7 +27,7 @@ const education: ExperienceType[] = require('./data/education.json');
 
 const skillSet: { [key: string]: string[] } = {
     'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP7', 'MySQL', 'REST', 'oAuth', 'Linux', 'WordPress', 'WCAG'],
-    'new': ['MongoDB', 'Python', 'NextJS', 'Tailwind'],
+    'new': ['MongoDB', 'Python', 'NextJS', 'Tailwind', 'OpenAI'],
     'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Yarn', 'JetBrains', 'Jira', 'Azure', 'Figma', 'Photoshop']
 };
 
@@ -35,7 +35,7 @@ const bio: { [key: string]: ReactNode } = {
     'title': <h1><em>Andrew</em> <em>Hahn</em></h1>,
     'intro': <p>Professional software engineer since 2004 • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
     'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98<br/>Boise, Idaho USA</span>,
-    'slogan': <p><strong>Heads together</strong> we endeavor.</p>
+    'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
 
 /**
@@ -56,22 +56,26 @@ const getIdahoTime = () => new Intl.DateTimeFormat('en-GB', { month: 'short', da
  * @param {object} props
  * @constructor
  */
-function ResumeItem(props: { experience: ExperienceType; })
+function ResumeItem({experience}: { experience: ExperienceType })
 {
-    const experienceImage = require(`./images/${props.experience.logo}`);
+    
+    let experienceImage;
+    if(experience.logo)
+    {
+        experienceImage = require(`./images/${experience.logo}`);
+        experienceImage = <div className='company-logo'><img src={experienceImage} className={'company-logo_img'} alt={experience.title && experience.title}/></div>;
+    }
 
     return(
-        <section className={ props.experience.forceWidow ? 'print-widow' : undefined }>
-            <div className='company-logo'>
-                <img src={experienceImage} className={'company-logo_img'} alt={props.experience.title}/>
-            </div>
+        <section className={ experience.forceWidow ? 'print-widow' : undefined }>
+            { experience.logo && experienceImage }
             <div className='background-section'>
-                <h3>{props.experience.position}</h3>
-                <p>{props.experience.title}</p>
-                <h4>{props.experience.stint}</h4>
+                { experience.position && <h3>{experience.position}</h3> }
+                { experience.title && <p>{experience.title}</p> }
+                <h4>{experience.stint}</h4>
             </div>
             <div className='work-details'>
-                <p>{props.experience.details}</p>
+                <p>{experience.details}</p>
             </div>
         </section>
     );

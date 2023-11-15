@@ -51,7 +51,7 @@ h1
     font-size: 1.8rem;
     text-transform: uppercase;
     padding-bottom: 0;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0;
     color: $font-color;
 }
 
@@ -98,42 +98,11 @@ section
     padding-top: 1rem;
     margin-bottom: 0.4rem;
     border-bottom: rgba(51, 68, 85, 0.4) solid 1px;
-    margin-top: 0.1rem;
 }
 
 .d-print
 {
     display: none;
-}
-
-@media print
-{
-    h1
-    {
-        margin-top: 0;
-
-        > span { font-size: 2.1rem; }
-    }
-
-    .print-widow
-    {
-        page-break-before: always;
-    }
-
-    .d-print
-    {
-        display: inline-block;
-    }
-    
-    .d-print-none
-    {
-        display: none !important;
-    }
-
-    .print-t-0
-    {
-        padding-top: 0;
-    }
 }
 
 .App
@@ -160,7 +129,8 @@ section
     }
 }
 
-@media print {
+@media print
+{
     .App
     {
         grid-template-areas:
@@ -170,9 +140,42 @@ section
 
     .grid-area-sidebar
     {
-        width: 2.55in;
+        width: 2.2in;
+    }
+
+    p {
+        font-size: 0.75rem;
+        line-height: 1.1rem;
+    }
+
+    h1
+    {
+        margin-top: 0;
+
+        > span { font-size: 2.1rem; }
+    }
+
+    .print-widow
+    {
+        page-break-before: always;
+    }
+
+    .d-print
+    {
+        display: inline-block;
+    }
+
+    .d-print-none
+    {
+        display: none !important;
+    }
+
+    .print-t-0
+    {
+        padding-top: 0;
     }
 }
+
 
 @media (min-width: $media-breakpoint-md)
 {

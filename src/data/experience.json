@@ -1,5 +1,11 @@
 [
     {
+        "position": "Sabbatical",
+        "stint": "June 2023 - Current",
+        "details": "Recovering from previous role burnout. Reconnecting with family and reducing backlog of home maintenance projects. Prioritizing health. Developing knowledge in engineering management through podcasts and reading. Building portfolio project area-man.vercel.app in NextJS with ChatGPT.",
+        "forceWidow": false
+    },
+    {
         "title": "Mattress Firm",
         "logo": "mattressfirm.png",
         "position": "Software Engineering Manager",
