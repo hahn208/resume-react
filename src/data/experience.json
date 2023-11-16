@@ -1,11 +1,5 @@
 [
     {
-        "position": "Sabbatical",
-        "stint": "June 2023 - Current",
-        "details": "Recovering from previous role burnout. Reconnecting with family and reducing backlog of home maintenance projects. Prioritizing health. Developing knowledge in engineering management through podcasts and reading. Building portfolio project area-man.vercel.app in NextJS with ChatGPT.",
-        "forceWidow": false
-    },
-    {
         "title": "Mattress Firm",
         "logo": "mattressfirm.png",
         "position": "Software Engineering Manager",
@@ -34,7 +28,7 @@
         "logo": "centurylink.png",
         "position": "Frontend Developer",
         "stint": "Sep 2012 – Aug 2015 • Boise, Idaho",
-        "details": "Evolved codebase to eliminate dependencies on framework shims, decreasing severe technical debt and infrastructure fragility. Authored user-stories for Scrum team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to quell high bounce rate by enacting image optimization, dismantled render blocking, eliminated code redundancies, and shed dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and site tool to remove user interface snags on internal CMS and code repository program.",
+        "details": "Eliminated dependencies on framework shims, decreasing severe technical debt, and increased site stability. Authored user-stories for Scrum team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to quell high bounce rate by enacting image optimization, dismantled render blocking, eliminated code redundancies, and shed dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and site tool to remove user interface snags on internal CMS and code repository program.",
         "forceWidow": false
     },
     {

@@ -26,9 +26,9 @@ const volunteer: ExperienceType[] = require('./data/volunteer.json');
 const education: ExperienceType[] = require('./data/education.json');
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP7', 'MySQL', 'REST', 'oAuth', 'Linux', 'WordPress', 'WCAG'],
-    'new': ['MongoDB', 'Python', 'NextJS', 'Tailwind', 'OpenAI'],
-    'tools': ['Docker', 'Cloudways', 'Adobe DTM', 'GTM', 'Git', 'Yarn', 'JetBrains', 'Jira', 'Azure', 'Figma', 'Photoshop']
+    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP8', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG'],
+    'new': ['NextJS', 'Tailwind', 'MongoDB', 'Python', 'OpenAI'],
+    'tools': ['Docker', 'Azure', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
 };
 
 const bio: { [key: string]: ReactNode } = {
@@ -92,8 +92,6 @@ function ResumeExperience()
     return(
         <div className={'grid-area-experience'}>
             <>
-                <h2><em>Education</em></h2>
-                { education.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
                 <h2><em>Experience</em></h2>
                 { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
             </>
@@ -195,6 +193,8 @@ function Sidebar()
             <ul className='skills-list'>
                 {skillsOutput(skillSet.tools)}
             </ul>
+            <h2><em>Education</em></h2>
+            { education.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
             <h2><em>Volunteer</em> <em>Experience</em></h2>
             { volunteer.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
         </div>
