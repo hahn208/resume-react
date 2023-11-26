@@ -7,7 +7,7 @@ interface ExperienceType {
     position?: string,
     stint: string,
     details: string,
-    forceWidow: boolean
+    forceWidow: boolean,
 }
 
 /**
@@ -32,8 +32,8 @@ const skillSet: { [key: string]: string[] } = {
 };
 
 const bio: { [key: string]: ReactNode } = {
-    'title': <h1><em>Andrew</em> <em>Hahn</em></h1>,
-    'intro': <p>Professional software engineer since 2004 • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
+    'title': <h1><em>Andrew</em> <em>Hahn</em> <small>(He/Him)</small></h1>,
+    'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
     'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98<br/>Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
@@ -110,8 +110,8 @@ function ResumeBio()
             <>
                 { bio.title }
                 <section>
-                    <>
-                        {bio.intro}<p>View Source: <a href='https://github.com/hahn208/resume-react' target='_blank' rel={'noreferrer'}>github.com/hahn208/resume-react</a></p>
+                    <>{/* require().default needed because webpack doesn't load svg file types inherently */}
+                        {bio.intro}<p><a href='https://github.com/hahn208/' target='_blank' rel={'noreferrer'}><img src={require('./images/github-ico-dark.svg').default} height={31} width={31} alt={'Github account- Andrew Hahn'} /></a>&nbsp;<a href='https://www.linkedin.com/in/208hahn/' target='_blank' rel={'noreferrer'}><img src={require('./images/linkedin-ico.svg').default} height={32} width={32} alt={'LinkedIn account- Andrew Hahn'} /></a></p>
                     </>
                 </section>
             </>
