@@ -32,8 +32,8 @@ const skillSet: { [key: string]: string[] } = {
 };
 
 const bio: { [key: string]: ReactNode } = {
-    'title': <h1><em>Andrew</em> <em>Hahn</em> <small>(He/Him)</small></h1>,
-    'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <i>scores</i> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
+    'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
+    'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <em>scores</em> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
     'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98<br/>Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
@@ -44,6 +44,18 @@ const bio: { [key: string]: ReactNode } = {
  * @return string
  */
 const makeSafeKeyString = (rawString: string) => rawString.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+
+/**
+ * Given a string containing a delimiter, return a replacement with delimited replaced with <em></em>
+ * @param rawString
+ */
+const emphasis = (rawString: string) => {
+    const emphArray = rawString.split('__');
+    
+    let bit = 1;
+    
+    return emphArray.reduce((stack, s) => { bit = 1-bit; return stack + (!bit ? s : `<em>${s}</em>`); }, '');
+};
 
 /**
  * Return the current time, to the minute only, in Boise.
@@ -75,7 +87,7 @@ function ResumeItem({experience}: { experience: ExperienceType })
                 <h4>{experience.stint}</h4>
             </div>
             <div className='work-details'>
-                <p>{experience.details}</p>
+                <p dangerouslySetInnerHTML={{ __html: emphasis(experience.details)}}></p>
             </div>
         </section>
     );
@@ -92,8 +104,9 @@ function ResumeExperience()
     return(
         <div className={'grid-area-experience'}>
             <>
-                <h2><em>Experience</em></h2>
+                <h2><span className={'small-caps'}>Experience</span></h2>
                 { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
+                <p><small>*Why do programmers prefer dark mode? Because light attracts bugs.</small></p>
             </>
         </div>
     );
@@ -193,9 +206,9 @@ function Sidebar()
             <ul className='skills-list'>
                 {skillsOutput(skillSet.tools)}
             </ul>
-            <h2><em>Education</em></h2>
+            <h2><span className={'small-caps'}>Education</span></h2>
             { education.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
-            <h2><em>Volunteer</em> <em>Experience</em></h2>
+            <h2><span className={'small-caps'}>Volunteer</span> <span className={'small-caps'}>Experience</span></h2>
             { volunteer.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
         </div>
     );

@@ -4,7 +4,7 @@
         "logo": "mattressfirm.png",
         "position": "Software Engineering Manager",
         "stint": "May 2021 – Jun 2023 • Remote",
-        "details": "Led multiple engineering teams and served as a tech lead, overseeing the successful re-platforming from Salesforce to Microsoft D365. Powered the transition by committing React+SASS, mapping out cross-team dependencies, adding monitoring & automation, and seamlessly migrating customers to the new platform. Carried teams over technical, abstract, and personal obstacles. Identified and addressed lurking issues impacting millions in annual revenue. Mobilized tiger teams reducing MTTR-- increasing MTTR with documentation and RCAs. Established and piloted the SDLC across multiple teams, executing bi-weekly production deployments. Orchestrated collaborative efforts across CRM, ERP, BI, and F&O teams for mission-critical feature launches. Accelerated teams through code reviews, knowledge-sharing sessions, tools for enablement, and awful puns.",
+        "details": "__Tech lead and supervisor__ to multiple engineering teams • __IC of Typescript, NodeJS, React, and SASS__ to power the transition from Salesforce to Microsoft D365 • __Monitoring, automation, and logging__ standards enacted  • Carried teams over technical, abstract, and personal obstacles • __Millions in revenue recovered__ by identifying and addressed lurking issues • __Millions in revenue generated__ collaborating with Business Insight, Customer Relation, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with documentation and RCAs • Shaped and piloted the __SDLC across multiple teams__ • __Production deployments__ executed bi-weekly • Accelerated teams through code reviews, knowledge-sharing sessions, tools for enablement, and __awful puns__*.",
         "forceWidow": false
     },
     {
@@ -12,7 +12,7 @@
         "logo": "thrive.png",
         "position": "Sr. Full Stack Developer",
         "stint": "Sep 2015 – May 2021 • Boise, Idaho",
-        "details": "Fastened close relationships with clients. Piloted sites given concept / design to fully deployed mobile-first, ADA compliant, and PageInsights \"A\" rated. With object oriented PHP, custom MySQL queries & stored procedures, SASS, class-based ES6 JS, and HTML5 the Wordpress platform was adapted and extended to enrich client capabilities. Culled bugs on some of the worst greenfield projects imaginable. Instituted personal coding standards and disciplines. Mentored junior devs and new hires. Detailed setup and maintenance instructions for team collective knowledge capital, ie critical backup systems, massive data batch processing, and deployment playbooks. Highlighted work: PBS Kids, Ada County ID, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, Boise State University.",
+        "details": "Fastened close relationships with clients. Piloted sites given concept / design to fully deployed __mobile-first, ADA compliant, and \"Green\" Lighthouse__ rated. With __object oriented PHP, custom MySQL queries & stored procedures, SASS, class-based ES6 JS, and HTML5__ I extended the Wordpress platform to enable clients. Culled bugs on some of the worst greenfield projects imaginable. Instituted personal __coding standards and disciplines__. __Mentored__ junior devs and new hires. Detailed setup and maintenance instructions for team __collective knowledge__ capital, ie critical backup systems, massive data batch processing, and deployment playbooks. Highlighted work: PBS Kids, Ada County ID, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, Boise State University.",
         "forceWidow": false
     },
     {
@@ -20,7 +20,7 @@
         "logo": "mattressfirm.png",
         "position": "Software Engineer (contract)",
         "stint": "Feb 2020 – Aug 2020 • Remote",
-        "details": "Originally assigned HTML and CSS support, but swiftly advanced to full stack developer. Tooled CMS modules, enabling the marketing and operations teams to manage their own promotions. This corrected the situation where skilled developers were under-utilized for trivial HTML tasks. In the short six-month contract: Immersed myself in the tech-stack, delivered expedient results while clearing the two-month user-story backlog, on-boarded two replacement hires.",
+        "details": "Originally assigned HTML and CSS support, but swiftly advanced to __full stack developer in Java, Handlebars, and LESS__. __Tooled CMS modules__, enabling the marketing teams to manage their own promotions-- resolving time wasted by the engineers spent on trivial HTML tasks. In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, __on-boarded replacement hires__.",
         "forceWidow": false
     },
     {
@@ -28,7 +28,7 @@
         "logo": "centurylink.png",
         "position": "Frontend Developer",
         "stint": "Sep 2012 – Aug 2015 • Boise, Idaho",
-        "details": "Eliminated dependencies on framework shims, decreasing severe technical debt, and increased site stability. Authored user-stories for Scrum team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to quell high bounce rate by enacting image optimization, dismantled render blocking, eliminated code redundancies, and shed dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and site tool to remove user interface snags on internal CMS and code repository program.",
+        "details": "Eliminated dependencies on framework shims, decreasing severe technical debt, and increased site stability. Authored user-stories for Scrum team to address general performance and usability issues. Conducted A/B tests to measure boosts in revenue achieved by calibrating user experience elements. Engineered user funnel tracing to expose user dead-ends. Directed and delivered browser performance tuning to quell high bounce rate by enacting image optimization, dismantled render blocking, factored out code redundancies, and shed dead code weight. At times achieved 10x page speed improvement. Empowered team with chrome extension and site tool to remove user interface snags on internal CMS and code repository program.",
         "forceWidow": false
     },
     {
