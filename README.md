@@ -20,3 +20,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   In an e-commerce project the client's brick and mortar POS system exported daily inventory as a CSV. Product data (attributes, images, stock) was batch processed by a combination of Bash and PHP/MySQL to be ingested by a Wordpress site.
 - Exacted lurking issues quietly impacting millions in annual revenue.<br>
 Turned out Safari users were unable to interact with the recaptcha that was used on an invoice payment page, which I found through a find-and-fix dashboard the company added. I pushed hard to remove the security check since it didn't make much sense in the first place.
+- The horrible application used as a code repository and code deployments was very slow. I created a site that would build a command-line string to rapidly merge to trunk (SVN) instead of using the clunky UI.
+- Built a chrome extension to drill down through the online interface and pre-populate fields.
