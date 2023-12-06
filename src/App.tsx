@@ -27,7 +27,7 @@ const education: ExperienceType[] = require('./data/education.json');
 
 const skillSet: { [key: string]: string[] } = {
     'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP8', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG'],
-    'new': ['NextJS', 'Tailwind', 'MongoDB', 'Python', 'OpenAI'],
+    'new': ['NextJS', 'Tailwind', 'MongoDB', 'Python', 'ChatGPT'],
     'tools': ['Docker', 'Azure', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
 };
 
@@ -106,7 +106,7 @@ function ResumeExperience()
             <>
                 <h2><span className={'small-caps'}>Experience</span></h2>
                 { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
-                <p><small>*Why do programmers prefer dark mode? Because light attracts bugs.</small></p>
+                <p><small>[1] Why do programmers prefer dark mode? Because light attracts bugs.</small></p>
             </>
         </div>
     );
