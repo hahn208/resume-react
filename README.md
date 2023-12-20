@@ -22,3 +22,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Turned out Safari users were unable to interact with the recaptcha that was used on an invoice payment page, which I found through a find-and-fix dashboard the company added. I pushed hard to remove the security check since it didn't make much sense in the first place.
 - The horrible application used as a code repository and code deployments was very slow. I created a site that would build a command-line string to rapidly merge to trunk (SVN) instead of using the clunky UI.
 - Built a chrome extension to drill down through the online interface and pre-populate fields.
+- New My Account was NextJS -> GraphQL -> MuleSoft -> SFMC
+- Shortened order uuid by encoding, resulted in invalid characters *sometimes*.
