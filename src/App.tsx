@@ -26,8 +26,8 @@ const volunteer: ExperienceType[] = require('./data/volunteer.json');
 const education: ExperienceType[] = require('./data/education.json');
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP8', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG'],
-    'new': ['NextJS', 'Tailwind', 'MongoDB', 'Python', 'OpenAI'],
+    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP8', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Collaborative', 'Problem-solver'],
+    'new': ['NextJS', 'Tailwind', 'MongoDB', 'Python', 'ChatGPT', 'GraphQL'],
     'tools': ['Docker', 'Azure', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
 };
 
