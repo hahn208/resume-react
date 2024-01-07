@@ -26,15 +26,15 @@ const volunteer: ExperienceType[] = require('./data/volunteer.json');
 const education: ExperienceType[] = require('./data/education.json');
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP8', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG'],
-    'new': ['NextJS', 'Tailwind', 'MongoDB', 'Python', 'ChatGPT'],
+    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP8', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Collaborative', 'Problem-solver'],
+    'new': ['NextJS', 'Tailwind', 'MongoDB', 'Python', 'ChatGPT', 'GraphQL'],
     'tools': ['Docker', 'Azure', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
 };
 
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
     'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <em>scores</em> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
-    'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>208-283-52<span className={'no-spam'}>4321</span>98<br/>Boise, Idaho USA</span>,
+    'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
 
