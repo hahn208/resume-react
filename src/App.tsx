@@ -2,7 +2,7 @@ import {memo, MutableRefObject, ReactNode, useEffect, useRef, useState} from 're
 import './App.scss';
 
 interface ExperienceType {
-    title?: string,
+    title: string,
     logo?: string,
     position?: string,
     stint: string,
@@ -24,6 +24,15 @@ const volunteer: ExperienceType[] = require('./data/volunteer.json');
  * Import the education experience json.
  */
 const education: ExperienceType[] = require('./data/education.json');
+
+/**
+ * Import references if the file exists.
+ */
+let referral:  { [key: string]: string } = {};
+try {
+    process.env.REACT_APP_ENABLE_REF === 'true' && (referral = require('./data/job_reference.json'));
+}
+catch (e) { /*noop*/ }
 
 const skillSet: { [key: string]: string[] } = {
     'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP8', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Collaborative', 'Problem-solver'],
@@ -54,6 +63,8 @@ const emphasis = (rawString: string) => {
     
     let bit = 1;
     
+    // "stack" is an agglomerate of the string. The string has been split on __, which is concatenated with an <em>
+    //   tag wrapping the text every other time. "bit" toggles if the string should be wrapped or not.
     return emphArray.reduce((stack, s) => { bit = 1-bit; return stack + (!bit ? s : `<em>${s}</em>`); }, '');
 };
 
@@ -70,8 +81,8 @@ const getIdahoTime = () => new Intl.DateTimeFormat('en-GB', { month: 'short', da
  */
 function ResumeItem({experience}: { experience: ExperienceType })
 {
-    
     let experienceImage;
+
     if(experience.logo)
     {
         experienceImage = require(`./images/${experience.logo}`);
@@ -89,6 +100,8 @@ function ResumeItem({experience}: { experience: ExperienceType })
             <div className='work-details'>
                 <p dangerouslySetInnerHTML={{ __html: emphasis(experience.details)}}></p>
             </div>
+            { /** If the ignored json file exists, display the referral that matches the company **/ }
+            { referral.hasOwnProperty(experience.title) ? <>{referral[experience.title]}</> : '' }
         </section>
     );
 }
@@ -105,7 +118,7 @@ function ResumeExperience()
         <div className={'grid-area-experience'}>
             <>
                 <h2><span className={'small-caps'}>Experience</span></h2>
-                { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
+                { experienceSet.map((experienceItem, idx) => (<ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
                 <p><small>*Why do programmers prefer dark mode? Because light attracts bugs.</small></p>
             </>
         </div>
