@@ -24,3 +24,4 @@ Turned out Safari users were unable to interact with the recaptcha that was used
 - Built a chrome extension to drill down through the online interface and pre-populate fields.
 - New My Account was NextJS -> GraphQL -> MuleSoft -> SFMC
 - Shortened order uuid by encoding, resulted in invalid characters *sometimes*.
+- Cypress -> Playwright automation
