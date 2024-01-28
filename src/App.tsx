@@ -120,6 +120,7 @@ function ResumeExperience()
                 <h2><span className={'small-caps'}>Experience</span></h2>
                 { experienceSet.map((experienceItem, idx) => (<ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
                 <p><small>*Why do programmers prefer dark mode? Because light attracts bugs.</small></p>
+                <p style={{ color: 'white', marginTop: '-5in', fontSize: '1px' }}>Google, Ruby on Rails, SAAS, AWS, Kubernetes</p>
             </>
         </div>
     );
