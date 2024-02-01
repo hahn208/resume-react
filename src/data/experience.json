@@ -20,7 +20,7 @@
         "logo": "mattressfirm.png",
         "position": "Software Engineer (contract)",
         "stint": "Feb 2020 – Aug 2020 • Remote",
-        "details": "Originally assigned HTML and CSS support, but swiftly advanced to __full stack developer in Java, Handlebars, and LESS__. __Tooled CMS modules__, enabling the marketing teams to manage their own promotions-- resolving time wasted by the engineers spent on trivial HTML tasks. In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, __onboarded replacement hires__.",
+        "details": "Originally assigned HTML and CSS support, but swiftly advanced to __full stack developer in Java, Handlebars, and LESS__. __Tooled CMS modules__, enabling the marketing teams to manage their own promotions-- resolving time wasted by the engineers spent on trivial HTML tasks. Identified and resolved __XSS vulnerabilities__. In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, __onboarded replacement hires__.",
         "forceWidow": false
     },
     {
@@ -32,11 +32,11 @@
         "forceWidow": false
     },
     {
-        "title": "ShoutStage (now Vinyl)",
-        "logo": "shoutstage.png",
+        "title": "VYNYL",
+        "logo": "vynyl.png",
         "position": "Software Engineer",
         "stint": "Mar 2012 – Aug 2012 • Boise, Idaho",
-        "details": "Contributed to a consolidated communication platform with chat API integrations. Drove technology decisions. Heavily researched browser limitations. Bleeding edge work in NodeJS 0.12 and MongoDB.",
+        "details": "Building a consolidated communication platform with oAuth enabled chat API integrations. Drove technology decisions about languages, architecture, and development workflow. Heavily researched browser limitations. Bleeding edge work in NodeJS and MongoDB.",
         "forceWidow": false
     },
     {
@@ -44,7 +44,7 @@
         "logo": "uptop.png",
         "position": "Software Engineer",
         "stint": "Jul 2006 – Feb 2012 • Boise, Idaho",
-        "details": "Owned high traffic projects with CenturyLink telecom. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Various local and international projects.",
+        "details": "Owned high traffic projects with CenturyLink telecom. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Leading engineer for Google Maps API implementations. Various local Boise and international projects.",
         "forceWidow": false
     }
 ]
