@@ -25,15 +25,24 @@ const volunteer: ExperienceType[] = require('./data/volunteer.json');
  */
 const education: ExperienceType[] = require('./data/education.json');
 
+/**
+ * Import references if the file exists.
+ */
+let referral:  { [key: string]: string } = {};
+try {
+    process.env.REACT_APP_ENABLE_REF === 'true' && (referral = require('./data/job_reference.json'));
+}
+catch (e) { /*noop*/ }
+
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP8', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Collaborative', 'Problem-solver'],
-    'new': ['NextJS', 'Tailwind', 'MongoDB', 'Python', 'ChatGPT', 'GraphQL'],
+    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP', 'MongoDB', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Scrum', 'Agile'],
+    'new': ['NextJS', 'Tailwind', 'Python', 'ChatGPT', 'GraphQL'],
     'tools': ['Docker', 'Azure', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
 };
 
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
-    'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented home geothermal heating system • Cultivated and leavened <em>scores</em> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
+    'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a> • Cultivated and leavened <em>scores</em> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
     'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
@@ -54,6 +63,8 @@ const emphasis = (rawString: string) => {
     
     let bit = 1;
     
+    // "stack" is an agglomerate of the string. The string has been split on __, which is concatenated with an <em>
+    //   tag wrapping the text every other time. "bit" toggles if the string should be wrapped or not.
     return emphArray.reduce((stack, s) => { bit = 1-bit; return stack + (!bit ? s : `<em>${s}</em>`); }, '');
 };
 
@@ -70,8 +81,8 @@ const getIdahoTime = () => new Intl.DateTimeFormat('en-GB', { month: 'short', da
  */
 function ResumeItem({experience}: { experience: ExperienceType })
 {
-    
     let experienceImage;
+
     if(experience.logo)
     {
         experienceImage = require(`./images/${experience.logo}`);
@@ -89,6 +100,8 @@ function ResumeItem({experience}: { experience: ExperienceType })
             <div className='work-details'>
                 <p dangerouslySetInnerHTML={{ __html: emphasis(experience.details)}}></p>
             </div>
+            { /** If the ignored json file exists, display the referral that matches the company **/ }
+            { referral.hasOwnProperty(experience.title) ? <h6 dangerouslySetInnerHTML={{ __html: referral[experience.title]}}></h6> : '' }
         </section>
     );
 }
@@ -105,8 +118,9 @@ function ResumeExperience()
         <div className={'grid-area-experience'}>
             <>
                 <h2><span className={'small-caps'}>Experience</span></h2>
-                { experienceSet.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
-                <p><small>[1] Why do programmers prefer dark mode? Because light attracts bugs.</small></p>
+                { experienceSet.map((experienceItem, idx) => (<ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
+                <p><small>*Why do programmers prefer dark mode? Because light attracts bugs.</small></p>
+                <p style={{ color: 'white', marginTop: '-5in', fontSize: '1px' }}>Google, Ruby on Rails, SAAS, AWS, Kubernetes</p>
             </>
         </div>
     );

@@ -4,7 +4,7 @@
         "logo": "mattressfirm.png",
         "position": "Software Engineering Manager",
         "stint": "May 2021 – Jun 2023 • Remote",
-        "details": "Migrated cart & checkout from SalesForce to D365 by scaling up team, __directing cross-organization efforts__, framing go-live playbook, and personally committing __Typescript, React, and SCSS__ • Leveraging array of expertise, __pragmatically elevated__ code quality, testing standards, and monitoring systems • Developed mutual __respect among leaders__ allowing an understanding of the needs of Engineering with the wants of the Product teams • __Empathetically eased disputes__ between Product and Design teams • __Millions in revenue recovered__ by identifying and addressing lurking issues • __Millions in revenue generated__ collaborating with Business Insight, Customer Relation, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with succinct documentation and RCAs • Shaped and piloted the __SDLC across multiple teams__ • Executed bi-weekly __production deployments__ • Combined technical and ethological approaches when hiring • Efficiently and __compassionately reduced team size__ during maintenance period • Accelerated teams through visual workflows, knowledge-sharing sessions, tools for enablement, and __awful puns__¹.",
+        "details": "__Tech lead and supervisor__ to multiple engineering teams • __IC of Typescript, NodeJS, React, and SASS__ to power the transition from Salesforce to Microsoft D365 • __Monitoring, automation, and logging__ standards enacted  • Carried teams over technical, abstract, and personal obstacles • __Millions in revenue recovered__ by identifying and addressing lurking issues • __Millions in revenue generated__ collaborating with Business Insight, Customer Relation, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with documentation and RCAs • Shaped and piloted the __SDLC across multiple teams__ • __Production deployments__ executed bi-weekly • Accelerated teams through Git hook workflows, code reviews, knowledge-sharing sessions, tools for enablement, and __awful puns__*.",
         "forceWidow": false
     },
     {
@@ -12,7 +12,7 @@
         "logo": "thrive.png",
         "position": "Sr. Full Stack Developer",
         "stint": "Sep 2015 – May 2021 • Boise, Idaho",
-        "details": "Fastened close client relationships with one-on-one meetings to better realize their vision. Piloted sites given concept / design to fully deployed __mobile-first, ADA compliant, and \"Green\" Lighthouse__ rated. With __object oriented PHP, custom MySQL queries & stored procedures, SASS, class-based ES6 JS, and HTML5__ I extended the Wordpress platform to enable clients. Culled bugs on some of the worst greenfield projects imaginable. Instituted personal __coding standards and disciplines__. __Mentored__ junior devs and new hires. Detailed setup and maintenance instructions for team __collective knowledge__ capital, ie critical backup systems, massive data batch processing, and deployment playbooks. Highlighted work: PBS Kids, Ada County ID, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, Boise State University.",
+        "details": "Fastened close client relationships with one-on-one meetings to better realize their vision. Piloted sites given concept / design to fully deployed __mobile-first, ADA compliant, and \"Green\" Lighthouse__ rated. With __object oriented PHP, custom MySQL queries & stored procedures, SASS, class-based ES6 JS, and HTML5__ I extended the Wordpress platform to enable clients. Culled defects by __modernizing legacy applications__. Instituted personal __coding standards and disciplines__. __Mentored__ junior devs and new hires. Detailed setup and maintenance instructions for team __collective knowledge__ capital, ie critical backup systems, massive data batch processing, and deployment playbooks. Highlighted work: PBS Kids, Ada County ID, IDVSA.org, Lee Pesky Learning Center, Syringa Properties, Boise State University.",
         "forceWidow": false
     },
     {
@@ -20,8 +20,8 @@
         "logo": "mattressfirm.png",
         "position": "Software Engineer (contract)",
         "stint": "Feb 2020 – Aug 2020 • Remote",
-        "details": "Originally assigned HTML and CSS support, but swiftly advanced to __full stack developer in Java, Handlebars, and LESS__. __Tooled CMS modules__, enabling the marketing teams to manage their own promotions-- resolving time wasted by the engineers spent on trivial HTML tasks. In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, __onboarded replacement hires__.",
-        "forceWidow": true
+        "details": "Originally assigned HTML and CSS support, but swiftly advanced to __full stack developer in Java, Handlebars, and LESS__. __Tooled CMS modules__, enabling the marketing teams to manage their own promotions-- resolving time wasted by the engineers spent on trivial HTML tasks. Identified and resolved __XSS vulnerabilities__. In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, __onboarded replacement hires__.",
+        "forceWidow": false
     },
     {
         "title": "CenturyLink (now Lumen telecom)",
@@ -32,11 +32,11 @@
         "forceWidow": false
     },
     {
-        "title": "ShoutStage (now Vinyl)",
-        "logo": "shoutstage.png",
+        "title": "VYNYL",
+        "logo": "vynyl.png",
         "position": "Software Engineer",
         "stint": "Mar 2012 – Aug 2012 • Boise, Idaho",
-        "details": "Contributed to a consolidated communication platform with chat API integrations. Drove technology decisions. Heavily researched browser limitations. Bleeding edge work in NodeJS 0.12 and MongoDB.",
+        "details": "Building a consolidated communication platform with oAuth enabled chat API integrations. Drove technology decisions about languages, architecture, and development workflow. Heavily researched browser limitations. Bleeding edge work in NodeJS and MongoDB.",
         "forceWidow": false
     },
     {
@@ -44,7 +44,7 @@
         "logo": "uptop.png",
         "position": "Software Engineer",
         "stint": "Jul 2006 – Feb 2012 • Boise, Idaho",
-        "details": "Owned high traffic projects with CenturyLink telecom. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Various local and international projects.",
+        "details": "Owned high traffic projects with CenturyLink telecom. Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers. Leading engineer for Google Maps API implementations. Various local Boise and international projects.",
         "forceWidow": false
     }
 ]
