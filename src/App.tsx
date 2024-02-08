@@ -101,7 +101,7 @@ function ResumeItem({experience}: { experience: ExperienceType })
                 <p dangerouslySetInnerHTML={{ __html: emphasis(experience.details)}}></p>
             </div>
             { /** If the ignored json file exists, display the referral that matches the company **/ }
-            { referral.hasOwnProperty(experience.title) ? <h6 dangerouslySetInnerHTML={{ __html: referral[experience.title]}}></h6> : '' }
+            { referral.hasOwnProperty(experience.title!) ? <h6 dangerouslySetInnerHTML={{ __html: referral[experience.title!]}}></h6> : '' }
         </section>
     );
 }
