@@ -35,7 +35,7 @@ try {
 catch (e) { /*noop*/ }
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP', 'MongoDB', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Scrum', 'Agile'],
+    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP', 'SOLID', 'MongoDB', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Scrum', 'Agile'],
     'new': ['NextJS', 'Tailwind', 'Python', 'ChatGPT', 'GraphQL'],
     'tools': ['Docker', 'Azure', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
 };
