@@ -12,7 +12,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### Notes
 
 (Mostly to remind myself of all the random projects that have been completed).
-- New My Account was a third party site authenticated through Azure Active Directory, which was transitioned to NextJS for Server-Side Rendering and routing -> GraphQL for API codification -> MuleSoft API -> SFMC data store
+- New My Account was a third party site authenticated through Azure Active Directory, which was transitioned to NextJS for Server-Side Rendering and routing -> GraphQL for API codification leveraging resolver functions -> MuleSoft API -> SFMC data store
 - Culled bugs on some of the worst greenfield projects imaginable<br>
   PHP and Google Maps store locator for large telecom, built on contract by team of junior devs in non-english speaking country.
 - Detailed setup and maintenance instructions<br>
