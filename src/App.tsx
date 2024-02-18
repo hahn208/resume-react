@@ -35,9 +35,9 @@ try {
 catch (e) { /*noop*/ }
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'ES7', 'NodeJS', 'React', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP', 'SOLID', 'MongoDB', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Scrum', 'Agile'],
+    'pro': ['HTML5', 'ES7', 'NodeJS', 'ReactJS', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP', 'SOLID', 'MongoDB', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Scrum', 'Agile'],
     'new': ['NextJS', 'Tailwind', 'Python', 'ChatGPT', 'GraphQL'],
-    'tools': ['Docker', 'Azure', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
+    'tools': ['Docker', 'Azure', 'Salesforce', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
 };
 
 const bio: { [key: string]: ReactNode } = {
@@ -119,7 +119,7 @@ function ResumeExperience()
             <>
                 <h2><span className={'small-caps'}>Experience</span></h2>
                 { experienceSet.map((experienceItem, idx) => (<ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
-                <p><small>*Why do programmers prefer dark mode? Because light attracts bugs.</small></p>
+                <p><small>*What do owls eat for breakfast? Mice Krispies.</small></p>
                 <p style={{ color: 'white', marginTop: '-5in', fontSize: '1px' }}>Google, Ruby on Rails, SAAS, AWS, Kubernetes</p>
             </>
         </div>
