@@ -35,14 +35,14 @@ try {
 catch (e) { /*noop*/ }
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'ES7', 'NodeJS', 'ReactJS', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP', 'SOLID', 'MongoDB', 'MySQL', 'REST', 'Linux', 'WordPress', 'WCAG', 'Scrum', 'Agile'],
-    'new': ['NextJS', 'Tailwind', 'Python', 'ChatGPT', 'GraphQL'],
-    'tools': ['Docker', 'Azure', 'Salesforce', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
+    'pro': ['HTML5', 'ES7', 'NodeJS', 'ReactJS', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP', 'SOLID', 'MongoDB', 'MySQL', 'Linux', 'WordPress', 'WCAG', 'Scrum', 'Agile'],
+    'new': ['Next.js', 'Tailwind', 'Python', 'ChatGPT', 'GraphQL'],
+    'tools': ['Docker', 'Azure', 'Salesforce', 'Optimizely', 'AEM', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
 };
 
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
-    'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a> • Cultivated and leavened <em>scores</em> of sourdough loaves • Sired the cutest/dorkiest child of the Hahn lineage</p>,
+    'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a> • Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
     'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
@@ -72,7 +72,7 @@ const emphasis = (rawString: string) => {
  * Return the current time, to the minute only, in Boise.
  * @return string
  */
-const getIdahoTime = () => new Intl.DateTimeFormat('en-GB', { month: 'short', day: 'numeric', year:'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'America/Boise' }).format(new Date()); 
+const getIdahoTime = () => new Intl.DateTimeFormat('en-GB', { month: 'short', day: 'numeric', year:'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'America/Boise', hour12: true }).format(new Date()); 
 
 /**
  *
@@ -120,7 +120,6 @@ function ResumeExperience()
                 <h2><span className={'small-caps'}>Experience</span></h2>
                 { experienceSet.map((experienceItem, idx) => (<ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
                 <p><small>*What do owls eat for breakfast? Mice Krispies.</small></p>
-                <p style={{ color: 'white', marginTop: '-5in', fontSize: '1px' }}>Google, Ruby on Rails, SAAS, AWS, Kubernetes</p>
             </>
         </div>
     );
