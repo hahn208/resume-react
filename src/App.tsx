@@ -8,6 +8,7 @@ interface ExperienceType {
     stint: string,
     details: string,
     forceWidow: boolean,
+    skills?: string[]
 }
 
 /**
@@ -35,9 +36,8 @@ try {
 catch (e) { /*noop*/ }
 
 const skillSet: { [key: string]: string[] } = {
-    'pro': ['HTML5', 'ES7', 'NodeJS', 'ReactJS', 'TypeScript', 'CSS3', 'SCSS', 'Jest', 'PHP', 'SOLID', 'MongoDB', 'MySQL', 'Linux', 'WordPress', 'WCAG', 'Scrum', 'Agile'],
-    'new': ['Next.js', 'Tailwind', 'Python', 'ChatGPT', 'GraphQL'],
-    'tools': ['Docker', 'Azure', 'Salesforce', 'Optimizely', 'AEM', 'GTM', 'Git', 'Yarn', 'npm', 'JetBrains', 'Jira', 'Figma', 'Photoshop']
+    'new': ['Next.js', 'Tailwind', 'Python', 'ChatGPT', 'd3.js'],
+    'tools': ['Agile', 'Scrum', 'Docker', 'Jira', 'Azure', 'Salesforce', 'Optimizely', 'AEM', 'GTM', 'Git', 'JetBrains', 'Figma', 'Photoshop']
 };
 
 const bio: { [key: string]: ReactNode } = {
@@ -94,12 +94,12 @@ function ResumeItem({experience}: { experience: ExperienceType })
             { experience.logo && experienceImage }
             <div className='background-section'>
                 { experience.position && <h3>{experience.position}</h3> }
-                { experience.title && <p>{experience.title}</p> }
-                <h4>{experience.stint}</h4>
+                { experience.title ? <h4><strong>{experience.title}</strong>{ experience.stint ? ' • ' + experience.stint : ''}</h4> : '' }
             </div>
             <div className='work-details'>
                 <p dangerouslySetInnerHTML={{ __html: emphasis(experience.details)}}></p>
             </div>
+            { experience.skills && <ul className={'skills-list'}>{experience.skills.map(s => <li key={makeSafeKeyString(s)}>{s}</li> )}</ul> }
             { /** If the ignored json file exists, display the referral that matches the company **/ }
             { referral.hasOwnProperty(experience.title) ? <h6 dangerouslySetInnerHTML={{ __html: referral[experience.title]}}></h6> : '' }
         </section>
@@ -185,7 +185,7 @@ function Sidebar()
      *
      * @param skillSet
      */
-    let skillsOutput = (skillSet: Array<string>) => (
+    let skillsOutput = (skillSet: string[]) => (
         skillSet.map(
             (skill: string) => <li key={makeSafeKeyString(skill)}>{skill}</li>
         )
@@ -194,7 +194,7 @@ function Sidebar()
     return (
         <div className={'grid-area-sidebar'}>
             <img src={require('./images/profile.jpg')} alt='Andrew Hahn with son' className={'d-print-none'} style={{'width': '100%'}}/>
-            <section className={'print-t-0'}>
+            <section className={'mb-2 print-t-0'}>
                 <div className={'flex gap-4'}>
                     <img src={require('./images/ah.png')} alt={'AH'} id={'AH'}/>
                     <div>
@@ -207,15 +207,11 @@ function Sidebar()
                 </div>
                 {bio.slogan}
             </section>
-            <h5>Professional Skills</h5>
-            <ul className='skills-list'>
-                {skillsOutput(skillSet.pro)}
-            </ul>
-            <h5>Novice Skills</h5>
+            <h5>Personal Skills</h5>
             <ul className='skills-list'>
                 {skillsOutput(skillSet.new)}
             </ul>
-            <h5>Professional Tools</h5>
+            <h5>Tools</h5>
             <ul className='skills-list'>
                 {skillsOutput(skillSet.tools)}
             </ul>

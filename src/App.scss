@@ -1,5 +1,5 @@
 $font-color: #334455;
-$accent-color-primary: #daf2e9;
+$accent-color-primary: #e8f7f2;
 
 $media-breakpoint-sm: 768px;
 $media-breakpoint-md: 1024px;
@@ -70,7 +70,7 @@ h4
     font-weight: 400;
     color: $font-color;
     padding: 0;
-    margin: 0;
+    margin: 0.3rem 0 0 0;
     font-size: 0.8rem;
     line-height: 0.8rem;
 }
@@ -105,8 +105,7 @@ small,
 
 section
 {
-    padding-top: 1rem;
-    margin-bottom: 0.4rem;
+    padding-top: 0.8rem;
     border-bottom: rgba(51, 68, 85, 0.4) solid 1px;
 }
 
@@ -134,7 +133,7 @@ section
         'bio'
         'sidebar'
         'experience';
-    column-gap: 1.8rem;
+    column-gap: 1.4rem;
     padding: 0 1rem 1rem;
 }
 
@@ -160,7 +159,7 @@ section
 
     .grid-area-sidebar
     {
-        width: 2.7in;
+        width: 2.2in;
     }
 
     p {
@@ -222,6 +221,11 @@ section
     grid-area: experience;
 }
 
+.mb-2
+{
+    margin-bottom: 0.4rem;
+}
+
 .skills-list
 {
     padding: 0;
@@ -233,7 +237,7 @@ section
         display: inline-block;
         background-color: $accent-color-primary;
         border-radius: 3px;
-        border: darken($accent-color-primary, 15%) solid 1px;
+        border: darken($accent-color-primary, 12%) solid 1px;
         padding: 0 0.2rem;
         margin: 2px;
         font-size: 0.8rem;
