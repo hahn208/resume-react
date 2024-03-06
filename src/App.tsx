@@ -8,7 +8,8 @@ interface ExperienceType {
     stint: string,
     details: string,
     forceWidow: boolean,
-    skills?: string[]
+    skills?: string[],
+    shouldDisplay: boolean
 }
 
 /**
@@ -42,7 +43,7 @@ const skillSet: { [key: string]: string[] } = {
 
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
-    'intro': <p>15+ years in software engineering • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a> • Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
+    'intro': <p>Lifelong software engineer • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a> • Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
     'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
@@ -118,7 +119,7 @@ function ResumeExperience()
         <div className={'grid-area-experience'}>
             <>
                 <h2><span className={'small-caps'}>Experience</span></h2>
-                { experienceSet.map((experienceItem, idx) => (<ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
+                { experienceSet.map((experienceItem, idx) => (experienceItem.shouldDisplay && <ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
                 <p><small>*What do owls eat for breakfast? Mice Krispies.</small></p>
             </>
         </div>
@@ -216,9 +217,9 @@ function Sidebar()
                 {skillsOutput(skillSet.tools)}
             </ul>
             <h2><span className={'small-caps'}>Education</span></h2>
-            { education.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
+            { education.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
             <h2><span className={'small-caps'}>Volunteer</span> <span className={'small-caps'}>Experience</span></h2>
-            { volunteer.map(experienceItem => (<ResumeItem experience={experienceItem}/>)) }
+            { volunteer.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
         </div>
     );
 }
