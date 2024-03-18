@@ -26,3 +26,4 @@ Turned out Safari users were unable to interact with the recaptcha that was used
 - Shortened order uuid by encoding, resulted in invalid characters *sometimes*.
 - Cypress -> Playwright automation
 - Build helper tool for converting data from Salesforce to Brightspot CMS.
+- Analytics tools: Optimizely, Tealium, FullStory, ContentSquare

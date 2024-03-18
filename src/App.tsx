@@ -41,10 +41,18 @@ const skillSet: { [key: string]: string[] } = {
     'tools': ['Agile', 'Scrum', 'Docker', 'Jira', 'Azure', 'Salesforce', 'Optimizely', 'AEM', 'GTM', 'Git', 'JetBrains', 'Figma', 'Photoshop']
 };
 
+
+const obfuscateTelNumber = (telNumber: string) => {
+    const noSpam = <span className={'no-spam'}>4321</span>;
+    
+    // Slice number and insert no-spam
+    return <span>{telNumber.slice(0, 6)}{noSpam}{telNumber.slice(6)}<br /></span>
+}
+
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
-    'intro': <p>Lifelong software engineer • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a> • Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
-    'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br/>Boise, Idaho USA</span>,
+    'intro': <p>Congenital engineer • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
+    'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br />{ process.env.REACT_APP_TEL_ENABLE === 'true' ? obfuscateTelNumber(process.env.REACT_APP_TEL_NUMBER as string) : '' }Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
 
