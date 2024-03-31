@@ -38,9 +38,8 @@ catch (e) { /*noop*/ }
 
 const skillSet: { [key: string]: string[] } = {
     'new': ['Next.js', 'Tailwind', 'Python', 'ChatGPT', 'd3.js'],
-    'tools': ['Agile', 'Scrum', 'Docker', 'Jira', 'Azure', 'Salesforce', 'Optimizely', 'AEM', 'GTM', 'Git', 'JetBrains', 'Figma', 'Photoshop']
+    'tools': ['Agile', 'Scrum', 'Docker', 'Jira', 'Azure', 'DataDog', 'Optimizely', 'AEM', 'GTM', 'Git', 'JetBrains', 'Figma', 'Photoshop']
 };
-
 
 const obfuscateTelNumber = (telNumber: string) => {
     const noSpam = <span className={'no-spam'}>4321</span>;

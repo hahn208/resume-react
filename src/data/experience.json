@@ -4,9 +4,9 @@
         "logo": "mattressfirm.png",
         "position": "Software Engineering Manager",
         "stint": "May 2021 – Jun 2023 • Remote",
-        "details": "__Tech lead and supervisor__ to multiple engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • Pushed __monitoring, automation, and logging__ standards • __Delivered solutions__ to CIO when faced with urgent challenges • __Millions__ in revenue __recovered__ with statistical analytics • npm component library contributor and publisher • __Millions__ in revenue __generated__ engaging with Business Insight, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __SDLC across multiple teams__ • Cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice with GQL resolvers__ to Mulesoft APIs • Accelerated teams through CI/CD tuning, code reviews, knowledge-transfer sessions, tools for enablement, and __awful puns__*.",
+        "details": "__Tech lead and supervisor__ to multiple engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • Pushed __monitoring, automation, and logging__ standards • __Delivered solutions__ to CIO when faced with urgent challenges • __Millions__ in revenue __recovered__ with statistical analytics • npm component library contributor and publisher • __Millions__ in revenue __generated__ engaging with Business Insight, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __SDLC across multiple teams__ • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice with GQL resolvers__ to Mulesoft APIs • Accelerated teams through CI/CD tuning, code reviews, onboarding, knowledge-transfer sessions, tools for enablement, and __awful puns__*.",
         "forceWidow": false,
-        "skills": ["HTML5", "SASS", "ES7", "Node.js", "React.js", "TypeScript", "GraphQL", "Jest", "RTL", "Cypress", "Playwright", "SOLID", "WCAG", "Scrum", "Agile", "Leadership", "Design Patterns", "A/B Testing"],
+        "skills": ["HTML5", "SASS", "ES7", "Node.js", "React.js", "TypeScript", "GraphQL", "Jest", "Cypress", "Playwright", "GIT", "SOLID", "A11Y", "Scrum", "Agile", "Leadership", "Design Patterns", "A/B Testing"],
         "shouldDisplay": true
     },
     {
@@ -24,7 +24,7 @@
         "logo": "mattressfirm.png",
         "position": "Software Engineer",
         "stint": "Feb 2020 – Aug 2020 • Remote (contract)",
-        "details": "Tasked with HTML and CSS support I broke the periphery to __full stack developer in Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
+        "details": "Tasked with HTML and CSS support I broke the periphery to full stack developer in __Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
         "forceWidow": false,
         "skills": ["HTML5", "JavaScript", "Handlebars", "jQuery", "LESS", "Java", "Tooling", "CMS", "SalesForce", "OWASP"],
         "shouldDisplay": true
