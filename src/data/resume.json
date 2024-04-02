@@ -1,0 +1,103 @@
+{
+    "projectSkills": ["Next.js", "Tailwind", "Python", "ChatGPT", "d3.js"],
+    "tools": ["Agile", "Scrum", "Docker", "Atlassian", "Azure", "DataDog", "Optimizely", "AEM", "GTM", "Git", "JetBrains", "Figma", "Photoshop"],
+    "workHistory" : [
+        {
+            "title": "Mattress Firm",
+            "logo": "mattressfirm.png",
+            "position": "Software Engineering Manager",
+            "stint": "May 2021 – Jun 2023 • Remote",
+            "stintDate": "05/2021-06/2023",
+            "details": "__Tech lead and supervisor__ to multiple engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • Pushed __monitoring, automation, and logging__ standards • __Delivered solutions__ to CIO when faced with urgent challenges • __Millions__ in revenue __recovered__ with statistical analytics • npm component library contributor and publisher • __Millions__ in revenue __generated__ engaging with Business Insight, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __SDLC across multiple teams__ • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice with GQL resolvers__ to Mulesoft APIs • Accelerated teams through CI/CD tuning, code reviews, onboarding, knowledge-transfer sessions, tools for enablement, and __awful puns__*.",
+            "forceWidow": false,
+            "skills": ["HTML5", "SASS", "ES7", "Node.js", "React.js", "TypeScript", "GraphQL", "Unit Testing", "Cypress", "Playwright", "GIT", "SOLID", "A11Y", "Scrum", "Agile", "Leadership", "Design Patterns", "A/B Testing"],
+            "shouldDisplay": true
+        },
+        {
+            "title": "Thrive Web Designs",
+            "logo": "thrive.png",
+            "position": "Sr. Full Stack Developer",
+            "stint": "Sep 2015 – May 2021 • Boise, Idaho",
+            "stintDate": "09/2015-05/2021",
+            "details": "Fastened close client relationships with one-on-one meetings to load-balance project management • Piloted sites given concept / design to fully deployed __mobile-first, ADA compliant, and \"Green\" Lighthouse__ rated • __Object oriented__ PHP, custom __MySQL__ queries & stored procedures, SASS, ES6 JS, Bootstrap, and HTML5 dev • Extended the Wordpress platform crafting themes and plugins to enable clients • Culled defects by __modernizing legacy applications__ • Instituted personal __coding standards and disciplines__ • __Mentored__ junior devs and new hires • Detailed setup and maintenance instructions for team __collective knowledge__ capital, ie critical backup systems, massive data batch processing, and deployment playbooks • Highlighted works: PBS Kids, Ada County Idaho, Boise State University.",
+            "forceWidow": false,
+            "skills": ["HTML5", "JavaScript", "jQuery", "Google Chart", "Bootstrap", "CSS3", "PHP", "Wordpress", "MySQL", "MongoDB", "WCAG", "OAuth2", "Linux"],
+            "shouldDisplay": true
+        },
+        {
+            "title": "Mattress Firm",
+            "logo": "mattressfirm.png",
+            "position": "Software Engineer",
+            "stint": "Feb 2020 – Aug 2020 • Remote (contract)",
+            "stintDate": "02/2020-08/2020",
+            "details": "Tasked with HTML and CSS support I broke the periphery to full stack developer in __Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
+            "forceWidow": false,
+            "skills": ["HTML5", "JavaScript", "Handlebars", "jQuery", "LESS", "Java", "Tooling", "CMS", "SalesForce", "OWASP"],
+            "shouldDisplay": true
+        },
+        {
+            "title": "CenturyLink",
+            "logo": "centurylink.png",
+            "position": "Frontend Developer",
+            "stint": "Sep 2012 – Aug 2015 • Boise, Idaho",
+            "stintDate": "09/2012-08/2015",
+            "details": "__Decreased severe technical debt__ while increasing __site stability__ by eliminating framework shims • Authored user-stories for Scrum team to address general __performance and usability__ issues • Team lead surrogate when required • Conducted __A/B testing__ to measure boosts in conversion • Directed and delivered browser __performance tuning__ to quell high bounce rate by enacting image optimization, dismantled render blocking, factoring out code redundancies, and shed dead code weight • Empowered team with __chrome extension__ and __site tools__ to remove user interface snags on internal CMS and code repo application.",
+            "forceWidow": false,
+            "skills": ["HTML", "JavaScript", "jQuery", "SVN", "A/B Testing", "SQL"],
+            "shouldDisplay": true
+        },
+        {
+            "title": "ShoutStage",
+            "logo": "shoutstage.png",
+            "position": "Software Engineer",
+            "stint": "Mar 2012 – Aug 2012 • Boise, Idaho",
+            "stintDate": "03/2012-08/2012",
+            "details": "Building a consolidated communication platform with oAuth enabled chat API integrations • Drove technology decisions about languages, architecture, and development workflow • Heavily researched browser limitations • Bleeding edge work in Node.js and MongoDB.",
+            "forceWidow": false,
+            "skills": ["HTML", "JavaScript", "jQuery", "Git", "Node.js", "MongoDB", "REST"],
+            "shouldDisplay": false
+        },
+        {
+            "title": "UpTop Corp",
+            "logo": "uptop.png",
+            "position": "Software Engineer",
+            "stint": "Jul 2006 – Feb 2012 • Boise, Idaho",
+            "stintDate": "07/2006-02/2012",
+            "details": "Owned high traffic projects with CenturyLink telecom • Balanced rapid pace concurrent promos broadcast to hundreds of thousands of customers • Leading engineer for Google Maps API implementations • Various local Boise and international projects.",
+            "forceWidow": false,
+            "skills": ["HTML", "JavaScript", "jQuery", "Google APIs", "Bootstrap", "CSS", "Coldfusion", "PHP", "Wordpress", "MySQL"],
+            "shouldDisplay": false
+        }
+    ],
+    "education" : [
+        {
+            "title": "College of Idaho",
+            "logo": "cofi.png",
+            "position": "Mathematics and Computer Science",
+            "stint": "Bachelors",
+            "stintDate": "",
+            "details": "Founded student workstudy IT positions. Daylighted student orgs online, created school’s online voting system, and established new computer labs.",
+            "forceWidow": false
+        }
+    ],
+    "volunteer": [
+        {
+            "title": "American Red Cross",
+            "logo": "redcross.png",
+            "position": "Blood Donor",
+            "stint": "",
+            "stintDate": "",
+            "details": "Since 2019, I have given over 10\u00a0liters of blood.",
+            "forceWidow": false
+        },
+        {
+            "title": "GitHub",
+            "logo": "github.png",
+            "position": "Open Source Contributor",
+            "stint": "",
+            "stintDate": "",
+            "details": "Logged issues and contributed resolutions through pull requests. Shipped component library updates on npmjs.",
+            "forceWidow": false
+        }
+    ]
+}

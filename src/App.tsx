@@ -6,26 +6,25 @@ interface ExperienceType {
     logo?: string,
     position?: string,
     stint: string,
+    stintDate: string,
     details: string,
     forceWidow: boolean,
     skills?: string[],
     shouldDisplay: boolean
 }
 
+interface ResumeData {
+    projectSkills: string[],
+    tools: string[],
+    workHistory: ExperienceType[],
+    education: ExperienceType[],
+    volunteer: ExperienceType[]
+}
+
 /**
  * Import the work experience json.
  */
-const experienceSet: ExperienceType[] = require('./data/experience.json');
-
-/**
- * Import the volunteer experience json.
- */
-const volunteer: ExperienceType[] = require('./data/volunteer.json');
-
-/**
- * Import the education experience json.
- */
-const education: ExperienceType[] = require('./data/education.json');
+const resume: ResumeData = require('./data/resume.json');
 
 /**
  * Import references if the file exists.
@@ -35,11 +34,6 @@ try {
     process.env.REACT_APP_ENABLE_REF === 'true' && (referral = require('./data/job_reference.json'));
 }
 catch (e) { /*noop*/ }
-
-const skillSet: { [key: string]: string[] } = {
-    'new': ['Next.js', 'Tailwind', 'Python', 'ChatGPT', 'd3.js'],
-    'tools': ['Agile', 'Scrum', 'Docker', 'Jira', 'Azure', 'DataDog', 'Optimizely', 'AEM', 'GTM', 'Git', 'JetBrains', 'Figma', 'Photoshop']
-};
 
 const obfuscateTelNumber = (telNumber: string) => {
     const noSpam = <span className={'no-spam'}>4321</span>;
@@ -51,7 +45,7 @@ const obfuscateTelNumber = (telNumber: string) => {
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
     'intro': <p>Congenital engineer • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
-    'address': <span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br />{ process.env.REACT_APP_TEL_ENABLE === 'true' ? obfuscateTelNumber(process.env.REACT_APP_TEL_NUMBER as string) : '' }Boise, Idaho USA</span>,
+    'address': <span>208.ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br />{ process.env.REACT_APP_TEL_ENABLE === 'true' ? obfuscateTelNumber(process.env.REACT_APP_TEL_NUMBER as string) : '' }Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
 
@@ -126,7 +120,7 @@ function ResumeExperience()
         <div className={'grid-area-experience'}>
             <>
                 <h2><span className={'small-caps'}>Experience</span></h2>
-                { experienceSet.map((experienceItem, idx) => (experienceItem.shouldDisplay && <ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
+                { resume.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay && <ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
                 <p><small>*What do owls eat for breakfast? Mice Krispies.</small></p>
             </>
         </div>
@@ -215,18 +209,92 @@ function Sidebar()
                 </div>
                 {bio.slogan}
             </section>
-            <h5>Personal Skills</h5>
+            <h5>Project Skills</h5>
             <ul className='skills-list'>
-                {skillsOutput(skillSet.new)}
+                {skillsOutput(resume.projectSkills)}
             </ul>
             <h5>Tools</h5>
             <ul className='skills-list'>
-                {skillsOutput(skillSet.tools)}
+                {skillsOutput(resume.tools)}
             </ul>
             <h2><span className={'small-caps'}>Education</span></h2>
-            { education.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
+            { resume.education.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
             <h2><span className={'small-caps'}>Volunteer</span> <span className={'small-caps'}>Experience</span></h2>
-            { volunteer.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
+            { resume.volunteer.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
+        </div>
+    );
+}
+
+let PlainText = () => {
+    const skillBucket: { [key: string]: string } = {};
+    
+    for (const workItem of resume.workHistory) {
+        for (const skillItem of workItem.skills!) {
+            skillBucket[skillItem] = skillItem;
+        }
+    }
+    
+    for (const skillItem of resume.projectSkills) {
+        skillBucket[skillItem] = skillItem;
+    }
+    console.log(resume.education);
+    
+    return (
+        <div>
+            <dl>
+                <dt>Name</dt>
+                <dd>Andrew Hahn</dd>
+            </dl>
+            <dl>
+                <dt>Email</dt>
+                <dd><span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com</span></dd>
+            </dl>
+            <dl>
+                <dt>Work Experience</dt>
+                <dd>
+                    <ul>
+                        { resume.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay ? <li>
+                            <dl>
+                                <dt>Job Title</dt>
+                                <dd>{experienceItem.position}</dd>
+                                <dt>Company</dt>
+                                <dd>{experienceItem.title}</dd>
+                                <dt>Location</dt>
+                                <dd></dd>
+                                <dt>Start Date</dt>
+                                <dd>{experienceItem.stintDate.split('-')[0]}</dd>
+                                <dt>End Date</dt>
+                                <dd>{experienceItem.stintDate.split('-')[1]}</dd>
+                                <dt>Role Description</dt>
+                                <dd>{experienceItem.details.replaceAll('__', '')}</dd>
+                            </dl>
+                        </li> : null))}
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>Education</dt>
+                <dd>
+                {resume.education.map((experienceItem, idx) => 
+                    <dl>
+                        <dt>Degree</dt>
+                        <dd>{experienceItem.stint}</dd>
+                        <dt>Area of Study</dt>
+                        <dd>{experienceItem.position}</dd>
+                        <dt>University</dt>
+                        <dd>{experienceItem.title}</dd>
+                    </dl>
+                )}
+                </dd>
+            </dl>
+            <dl>
+                <dt>Skills</dt>
+                <dl>
+                    <ul>
+                        {Object.values(skillBucket).map(s => <li>{s}</li>)}
+                    </ul>
+                </dl>
+            </dl>
         </div>
     );
 }
@@ -238,6 +306,10 @@ function Sidebar()
  */
 function App() 
 {
+    // Yes, this is ugly, but so is Workday.
+    if(window.location.search === '?plaintext')
+        return <PlainText></PlainText>
+    
     return (
         <div className='App'>
             <Sidebar/>
