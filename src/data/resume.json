@@ -77,7 +77,8 @@
             "stint": "Bachelors",
             "stintDate": "",
             "details": "Founded student workstudy IT positions. Daylighted student orgs online, created school’s online voting system, and established new computer labs.",
-            "forceWidow": false
+            "forceWidow": false,
+            "shouldDisplay": true
         }
     ],
     "volunteer": [
@@ -88,7 +89,8 @@
             "stint": "",
             "stintDate": "",
             "details": "Since 2019, I have given over 10\u00a0liters of blood.",
-            "forceWidow": false
+            "forceWidow": false,
+            "shouldDisplay": true
         },
         {
             "title": "GitHub",
@@ -97,7 +99,8 @@
             "stint": "",
             "stintDate": "",
             "details": "Logged issues and contributed resolutions through pull requests. Shipped component library updates on npmjs.",
-            "forceWidow": false
+            "forceWidow": false,
+            "shouldDisplay": true
         }
     ]
 }

@@ -1,4 +1,5 @@
-import {memo, MutableRefObject, ReactNode, useEffect, useRef, useState} from 'react';
+import { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import resume from './data/resume.json';
 import './App.scss';
 
 interface ExperienceType {
@@ -12,19 +13,6 @@ interface ExperienceType {
     skills?: string[],
     shouldDisplay: boolean
 }
-
-interface ResumeData {
-    projectSkills: string[],
-    tools: string[],
-    workHistory: ExperienceType[],
-    education: ExperienceType[],
-    volunteer: ExperienceType[]
-}
-
-/**
- * Import the work experience json.
- */
-const resume: ResumeData = require('./data/resume.json');
 
 /**
  * Import references if the file exists.
@@ -71,12 +59,6 @@ const emphasis = (rawString: string) => {
 };
 
 /**
- * Return the current time, to the minute only, in Boise.
- * @return string
- */
-const getIdahoTime = () => new Intl.DateTimeFormat('en-GB', { month: 'short', day: 'numeric', year:'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'America/Boise', hour12: true }).format(new Date()); 
-
-/**
  *
  * @param {object} props
  * @constructor
@@ -102,7 +84,7 @@ function ResumeItem({experience}: { experience: ExperienceType })
                 <p dangerouslySetInnerHTML={{ __html: emphasis(experience.details)}}></p>
             </div>
             { experience.skills && <ul className={'skills-list'}>{experience.skills.map(s => <li key={makeSafeKeyString(s)}>{s}</li> )}</ul> }
-            { /** If the ignored json file exists, display the referral that matches the company **/ }
+            { /** If the json file exists, display the referral that matches the company **/ }
             { referral.hasOwnProperty(experience.title) ? <h6 dangerouslySetInnerHTML={{ __html: referral[experience.title]}}></h6> : '' }
         </section>
     );
@@ -147,32 +129,36 @@ function ResumeBio()
     )
 }
 
-// TODO: Convert to context? https://react.dev/reference/react/memo#updating-a-memoized-component-using-a-context
-const IdahoTime = memo(
-    function IdahoTime()
-    {
-        // Create a ref for the interval timer, so it can be cleared later.
-        let idahoTimePendulum: MutableRefObject<NodeJS.Timer | false> = useRef(false);
-        
-        /* Create a state variable and setter for the time display */
-        const [idahoTime, setIdahoTime] = useState(getIdahoTime());
-        
-        // Avoid rendering the time before hydration. Only run once.
-        useEffect(
-            () => {
-                // In Dev mode this might render twice. Prevent multiple intervals from being created.
-                if(!idahoTimePendulum.current)
-                    idahoTimePendulum.current = setInterval(() => { setIdahoTime(getIdahoTime()) }, 5000);
-                
-                // Return a callback function when the component is unmounted so the interval is cleared.
-                return () => { clearInterval(~~idahoTimePendulum.current); idahoTimePendulum.current = false; };
-            },
-            [idahoTime]
-        );
-        
-        return <span className={'d-print-none'}>{ idahoTime }</span>;
-    }
-)
+function IdahoTime() {
+    /**
+     * Return the current time, to the minute only, in Boise.
+     * @return string
+     */
+    const getIdahoTime = useCallback(() => new Intl.DateTimeFormat('en-GB', { month: 'short', day: 'numeric', year:'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'America/Boise', hour12: true }).format(new Date()), []);
+
+    // Create a ref for the interval timer, so it can be cleared later.
+    let idahoTimePendulum: MutableRefObject<NodeJS.Timer | false> = useRef(false);
+    
+    /* Create a state variable and setter for the time display */
+    const [idahoTime, setIdahoTime] = useState(getIdahoTime());
+    
+    // Avoid rendering the time before hydration. Only run once.
+    useEffect(
+        () => {
+            // In Dev mode this might render twice. Prevent multiple intervals from being created.
+            if(!idahoTimePendulum.current)
+                idahoTimePendulum.current = setInterval(() => { setIdahoTime(getIdahoTime()) }, 5000);
+            // Return a callback function when the component is unmounted so the interval is cleared.
+            return () => { 
+                if(idahoTimePendulum.current) clearInterval(idahoTimePendulum.current);
+                idahoTimePendulum.current = false;
+            };
+        },
+        [getIdahoTime]
+    );
+    
+    return <span className={'d-print-none'}>{ idahoTime }</span>;
+}
 
 /**
  * Sidebar
@@ -237,7 +223,6 @@ let PlainText = () => {
     for (const skillItem of resume.projectSkills) {
         skillBucket[skillItem] = skillItem;
     }
-    console.log(resume.education);
     
     return (
         <div>
@@ -253,7 +238,7 @@ let PlainText = () => {
                 <dt>Work Experience</dt>
                 <dd>
                     <ul>
-                        { resume.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay ? <li>
+                        { resume.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay ? <li key={'exp' + idx}>
                             <dl>
                                 <dt>Job Title</dt>
                                 <dd>{experienceItem.position}</dd>
@@ -275,7 +260,7 @@ let PlainText = () => {
             <dl>
                 <dt>Education</dt>
                 <dd>
-                {resume.education.map((experienceItem, idx) => 
+                {resume.education.map((experienceItem) => 
                     <dl>
                         <dt>Degree</dt>
                         <dd>{experienceItem.stint}</dd>
