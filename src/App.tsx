@@ -14,6 +14,16 @@ interface ExperienceType {
     shouldDisplay: boolean
 }
 
+interface ResumeData {
+    projectSkills: string[],
+    tools: string[],
+    workHistory: ExperienceType[],
+    education: ExperienceType[],
+    volunteer: ExperienceType[]
+}
+
+let resumeData = resume as ResumeData;
+
 /**
  * Import references if the file exists.
  */
@@ -33,7 +43,7 @@ const obfuscateTelNumber = (telNumber: string) => {
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
     'intro': <p>Congenital engineer • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
-    'address': <span>208.ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com<br />{ process.env.REACT_APP_TEL_ENABLE === 'true' ? obfuscateTelNumber(process.env.REACT_APP_TEL_NUMBER as string) : '' }Boise, Idaho USA</span>,
+    'address': <span>208.ha<span className={'no-spam'}>tldr</span>hn&#64;gmail&#46;com<br />{ process.env.REACT_APP_TEL_ENABLE === 'true' ? obfuscateTelNumber(process.env.REACT_APP_TEL_NUMBER as string) : '' }Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
 
@@ -52,6 +62,13 @@ const emphasis = (rawString: string) => {
     const emphArray = rawString.split('__');
     
     let bit = 1;
+    
+    // Check that there was an even number of separators.
+    if (emphArray.length % 2 === 0)
+    {
+        // There was an unclosed emphasis attempt. Return the text without formatting.
+        return rawString.replace('__', '');
+    }
     
     // "stack" is an agglomerate of the string. The string has been split on __, which is concatenated with an <em>
     //   tag wrapping the text every other time. "bit" toggles if the string should be wrapped or not.
@@ -102,7 +119,7 @@ function ResumeExperience()
         <div className={'grid-area-experience'}>
             <>
                 <h2><span className={'small-caps'}>Experience</span></h2>
-                { resume.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay && <ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
+                { resumeData.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay && <ResumeItem key={makeSafeKeyString(`${experienceItem.title} ${idx}`)} experience={experienceItem}/>)) }
                 <p><small>*What do owls eat for breakfast? Mice Krispies.</small></p>
             </>
         </div>
@@ -197,16 +214,16 @@ function Sidebar()
             </section>
             <h5>Project Skills</h5>
             <ul className='skills-list'>
-                {skillsOutput(resume.projectSkills)}
+                {skillsOutput(resumeData.projectSkills)}
             </ul>
             <h5>Tools</h5>
             <ul className='skills-list'>
-                {skillsOutput(resume.tools)}
+                {skillsOutput(resumeData.tools)}
             </ul>
             <h2><span className={'small-caps'}>Education</span></h2>
-            { resume.education.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
+            { resumeData.education.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
             <h2><span className={'small-caps'}>Volunteer</span> <span className={'small-caps'}>Experience</span></h2>
-            { resume.volunteer.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
+            { resumeData.volunteer.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
         </div>
     );
 }
@@ -214,13 +231,13 @@ function Sidebar()
 let PlainText = () => {
     const skillBucket: { [key: string]: string } = {};
     
-    for (const workItem of resume.workHistory) {
+    for (const workItem of resumeData.workHistory) {
         for (const skillItem of workItem.skills!) {
             skillBucket[skillItem] = skillItem;
         }
     }
     
-    for (const skillItem of resume.projectSkills) {
+    for (const skillItem of resumeData.projectSkills) {
         skillBucket[skillItem] = skillItem;
     }
     
@@ -232,13 +249,13 @@ let PlainText = () => {
             </dl>
             <dl>
                 <dt>Email</dt>
-                <dd><span>208ha<span className={'no-spam'}>asdf</span>hn&#64;gmail&#46;com</span></dd>
+                <dd><span>208ha<span className={'no-spam'}>crlf</span>hn&#64;gmail&#46;com</span></dd>
             </dl>
             <dl>
                 <dt>Work Experience</dt>
                 <dd>
                     <ul>
-                        { resume.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay ? <li key={'exp' + idx}>
+                        { resumeData.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay ? <li key={'exp' + idx}>
                             <dl>
                                 <dt>Job Title</dt>
                                 <dd>{experienceItem.position}</dd>
@@ -260,7 +277,7 @@ let PlainText = () => {
             <dl>
                 <dt>Education</dt>
                 <dd>
-                {resume.education.map((experienceItem) => 
+                {resumeData.education.map((experienceItem) => 
                     <dl>
                         <dt>Degree</dt>
                         <dd>{experienceItem.stint}</dd>
