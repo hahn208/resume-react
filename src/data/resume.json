@@ -12,7 +12,7 @@
             "position": "Software Engineering Manager",
             "stint": "May 2021 – Jun 2023 • Remote",
             "stintDate": "05/2021-06/2023",
-            "details": "__Tech lead and supervisor__ to multiple engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • Pushed __monitoring, automation, and logging__ standards • __Delivered solutions__ to CIO when faced with urgent challenges • __Millions__ in revenue __recovered__ with statistical analytics • FOSS npm component library contributor and publisher • __Millions__ in revenue __generated__ engaging with Business Insight, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __SDLC across 5 teams__ • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice with GQL resolvers__ to Mulesoft APIs • Accelerated teams through CI/CD tuning, code reviews, onboarding, knowledge-transfer sessions, tools for enablement, and __awful puns__*.",
+            "details": "__Tech lead and supervisor__ to multiple engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • __Pushed standards__ in monitoring, automation, and logging • __Delivered solutions__ to CIO when faced with urgent challenges • __Millions__ in revenue __recovered__ with statistical analytics • FOSS npm component library contributor and publisher • __Millions__ in revenue __generated__ engaging with Business Insight, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __SDLC across 5 teams__ • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice with GQL resolvers__ to Mulesoft APIs • Change control management • Accelerated teams through CI/CD tuning, code reviews, onboarding, knowledge-transfer sessions, tools for enablement, and __awful puns__*.",
             "skills": [
                 "HTML5", "SASS", "ES7", "Node.js", "React.js", "TypeScript", "GraphQL", "Unit Testing", "Cypress", "GIT", "SOLID", "A11Y", "Web Optimization", "Scrum", "Agile", "Design Patterns", "A/B Testing"
             ],
@@ -24,7 +24,7 @@
             "position": "Sr. Full Stack Developer",
             "stint": "Sep 2015 – May 2021 • Boise, Idaho",
             "stintDate": "09/2015-05/2021",
-            "details": "Fastened close client relationships with one-on-one meetings to load-balance project management • Piloted sites given concept / design to fully deployed __mobile-first, ADA compliant, and \"Green\" Lighthouse__ rated • __Object oriented__ PHP, custom __MySQL__ queries & stored procedures, SASS, ES6 JS, Bootstrap, and HTML5 dev • Extended the Wordpress platform crafting themes and plugins to enable clients • Culled defects by __modernizing legacy applications__ • Instituted personal __coding standards and disciplines__ • __Mentored__ junior devs and new hires • Detailed setup and maintenance instructions for team __collective knowledge__ capital, ie critical backup systems, massive data batch processing, and deployment playbooks • Highlighted works: PBS Kids, Ada County Idaho, Boise State University.",
+            "details": "Fastened close client relationships with one-on-one meetings to load-balance project management • Piloted sites given concept / design to fully deployed __mobile-first, ADA compliant, and \"Green\" Lighthouse__ rated • __Object oriented__ PHP, custom MySQL queries & __stored procedures__, SASS, ES6 JS, Bootstrap, and HTML5 dev • __Dynamic PDF__ creation • Client dashboard __data visualization__ • Extended the Wordpress platform crafting themes and plugins to enable clients • Culled defects by __modernizing legacy applications__ • Instituted personal __coding standards and disciplines__ • __Mentored__ junior devs and new hires • Detailed setup and maintenance instructions for team __collective knowledge__ capital, ie critical backup systems, massive data batch processing, and deployment playbooks.",
             "forceWidow": false,
             "skills": ["HTML5", "JavaScript", "jQuery", "Google Chart", "Bootstrap", "CSS3", "PHP", "Wordpress", "MySQL", "MongoDB", "WCAG", "OAuth2", "Linux"],
             "shouldDisplay": true
@@ -36,7 +36,7 @@
             "stint": "Feb 2020 – Aug 2020 • Remote (contract)",
             "stintDate": "02/2020-08/2020",
             "details": "Tasked with HTML and CSS support I broke the periphery to full stack developer in __Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
-            "forceWidow": false,
+            "forceWidow": true,
             "skills": ["HTML5", "JavaScript", "Handlebars", "jQuery", "LESS", "Java", "Tooling", "CMS", "SalesForce", "OWASP"],
             "shouldDisplay": true
         },
@@ -93,7 +93,7 @@
             "position": "Blood Donor",
             "stint": "",
             "stintDate": "",
-            "details": "Since 2019, I have given over 10\u00a0liters of blood.",
+            "details": "Since 2019, I have given over 12\u00a0liters of blood.",
             "forceWidow": false,
             "shouldDisplay": true
         },

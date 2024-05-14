@@ -42,7 +42,7 @@ const obfuscateTelNumber = (telNumber: string) => {
 
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
-    'intro': <p>Congenital engineer • Traversed hundreds of miles of Idaho back-country • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.</p>,
+    'intro': <p>Congenital engineer • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated  <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.<br/><br/><em>Full stack software engineer</em> with <em>management</em> experience • <em>Adapts</em> to times of urgent revenue bleed to methodical epic development • Wholly invested in company, product, and <em>team health</em>.</p>,
     'address': <span>208.ha<span className={'no-spam'}>tldr</span>hn&#64;gmail&#46;com<br />{ process.env.REACT_APP_TEL_ENABLE === 'true' ? obfuscateTelNumber(process.env.REACT_APP_TEL_NUMBER as string) : '' }Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
@@ -243,60 +243,53 @@ let PlainText = () => {
     
     return (
         <div>
-            <dl>
-                <dt>Name</dt>
-                <dd>Andrew Hahn</dd>
-            </dl>
-            <dl>
-                <dt>Email</dt>
-                <dd><span>208ha<span className={'no-spam'}>crlf</span>hn&#64;gmail&#46;com</span></dd>
-            </dl>
-            <dl>
-                <dt>Work Experience</dt>
-                <dd>
+            <ul>
+                <li>Name: Andrew Hahn</li>
+            </ul>
+            <ul>
+                <li>Email: <span>208ha<span className={'no-spam'}>crlf</span>hn&#64;gmail&#46;com</span></li>
+            </ul>
+            <ul><li>Location: Boise, ID</li></ul>
+            <ul>
+                <li>
+                    <h2>Work Experience</h2>
                     <ul>
                         { resumeData.workHistory.map((experienceItem, idx) => (experienceItem.shouldDisplay ? <li key={'exp' + idx}>
-                            <dl>
-                                <dt>Job Title</dt>
-                                <dd>{experienceItem.position}</dd>
-                                <dt>Company</dt>
-                                <dd>{experienceItem.title}</dd>
-                                <dt>Location</dt>
-                                <dd></dd>
-                                <dt>Start Date</dt>
-                                <dd>{experienceItem.stintDate.split('-')[0]}</dd>
-                                <dt>End Date</dt>
-                                <dd>{experienceItem.stintDate.split('-')[1]}</dd>
-                                <dt>Role Description</dt>
-                                <dd>{experienceItem.details.replaceAll('__', '')}</dd>
-                            </dl>
+                            <ul>
+                                <li>Company: {experienceItem.title}</li>
+                                <li>Job Title: {experienceItem.position}</li>
+                                <li>Start Date: {experienceItem.stintDate.split('-')[0]}</li>
+                                <li>End Date: {experienceItem.stintDate.split('-')[1]}</li>
+                                <li>Role Description: {experienceItem.details.replaceAll('__', '')}</li>
+                            </ul>
                         </li> : null))}
                     </ul>
-                </dd>
-            </dl>
-            <dl>
-                <dt>Education</dt>
-                <dd>
-                {resumeData.education.map((experienceItem) => 
-                    <dl>
-                        <dt>Degree</dt>
-                        <dd>{experienceItem.stint}</dd>
-                        <dt>Area of Study</dt>
-                        <dd>{experienceItem.position}</dd>
-                        <dt>University</dt>
-                        <dd>{experienceItem.title}</dd>
-                    </dl>
-                )}
-                </dd>
-            </dl>
-            <dl>
-                <dt>Skills</dt>
-                <dl>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>Education</h2>
                     <ul>
-                        {Object.values(skillBucket).map(s => <li>{s}</li>)}
+                    {resumeData.education.map((experienceItem) => 
+                        <li>
+                            <ul>
+                                <li>Degree: {experienceItem.stint}</li>
+                                <li>Area of Study: {experienceItem.position}</li>
+                                <li>University: {experienceItem.title}</li>
+                            </ul>
+                        </li>
+                    )}
                     </ul>
-                </dl>
-            </dl>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>Skills</h2>
+                    <ul style={{ 'listStyleType': 'none' }}>
+                        {Object.values(skillBucket).map(s => <li style={{ 'display': 'inline' }}>{s} </li>)}
+                    </ul>
+                </li>
+            </ul>
         </div>
     );
 }
@@ -314,9 +307,9 @@ function App()
     
     return (
         <div className='App'>
-            <Sidebar/>
             <ResumeBio/>
             <ResumeExperience/>
+            <Sidebar/>
         </div>
     );
 }
