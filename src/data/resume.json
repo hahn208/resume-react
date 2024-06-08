@@ -12,7 +12,7 @@
             "position": "Software Engineering Manager",
             "stint": "May 2021 – Jun 2023 • Remote",
             "stintDate": "05/2021-06/2023",
-            "details": "__Tech lead and supervisor__ to multiple engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • __Pushed standards__ in monitoring, automation, and logging • __Delivered solutions__ to CIO when faced with urgent challenges • __Millions__ in revenue __recovered__ with statistical analytics • FOSS npm component library contributor and publisher • __Millions__ in revenue __generated__ engaging with Business Insight, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __SDLC across 5 teams__ • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice with GQL resolvers__ to Mulesoft APIs • Change control management • Accelerated teams through CI/CD tuning, code reviews, onboarding, knowledge-transfer sessions, tools for enablement, and __awful puns__*.",
+            "details": "__Tech lead and supervisor__ to multiple engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • __Pushed standards__ in monitoring, automation, and logging • __Delivered solutions__ to CIO when faced with urgent challenges • Millions in __revenue recovered__ with statistical analytics • FOSS npm component library contributor and publisher • Millions in __revenue generated__ engaging with Business Insight, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __SDLC across 5 teams__ • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice with GQL resolvers__ to Mulesoft APIs • Change control management • Accelerated teams through CI/CD tuning, code reviews, onboarding, knowledge-transfer sessions, tools for enablement, and __awful puns__*.",
             "skills": [
                 "HTML5", "SASS", "ES7", "Node.js", "React.js", "TypeScript", "GraphQL", "Unit Testing", "Cypress", "GIT", "SOLID", "A11Y", "Web Optimization", "Scrum", "Agile", "Design Patterns", "A/B Testing"
             ],
@@ -36,7 +36,7 @@
             "stint": "Feb 2020 – Aug 2020 • Remote (contract)",
             "stintDate": "02/2020-08/2020",
             "details": "Tasked with HTML and CSS support I broke the periphery to full stack developer in __Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
-            "forceWidow": true,
+            "forceWidow": false,
             "skills": ["HTML5", "JavaScript", "Handlebars", "jQuery", "LESS", "Java", "Tooling", "CMS", "SalesForce", "OWASP"],
             "shouldDisplay": true
         },
@@ -57,9 +57,9 @@
             "position": "Software Engineer",
             "stint": "Mar 2012 – Aug 2012 • Boise, Idaho",
             "stintDate": "03/2012-08/2012",
-            "details": "Building a consolidated communication platform with oAuth enabled chat API integrations • Drove technology decisions about languages, architecture, and development workflow • Heavily researched browser limitations • Bleeding edge work in Node.js and MongoDB.",
+            "details": "Innovated consolidated communication SAAS platform with chat API integrations • Drove language, architecture, and workflow decisions • Heavily researched browser limitations • Bleeding edge work in Node.js and MongoDB.",
             "forceWidow": false,
-            "skills": ["HTML", "JavaScript", "jQuery", "Git", "Node.js", "MongoDB", "REST"],
+            "skills": ["HTML", "JavaScript", "jQuery", "Git", "Node.js", "MongoDB", "oAuth", "REST"],
             "shouldDisplay": true
         },
         {
