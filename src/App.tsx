@@ -48,7 +48,7 @@ const bio: { [key: string]: ReactNode } = {
 };
 
 /**
- * Given a string, remove any non-alphanum characters and replace with a hyphen.
+ * Given a string, remove any non-alphanumeric characters and replace with a hyphen.
  * @param rawString The unsanitized string.
  * @return string
  */

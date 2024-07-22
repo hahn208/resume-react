@@ -35,7 +35,7 @@
             "position": "Software Engineer",
             "stint": "Feb 2020 – Aug 2020 • Remote (contract)",
             "stintDate": "02/2020-08/2020",
-            "details": "Tasked with HTML and CSS support I broke the periphery to full stack developer in __Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
+            "details": "Hired for HTML and CSS support I leapt to full stack developer in __Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
             "forceWidow": false,
             "skills": ["HTML5", "JavaScript", "Handlebars", "jQuery", "LESS", "Java", "Tooling", "CMS", "SalesForce", "OWASP"],
             "shouldDisplay": true
@@ -103,7 +103,17 @@
             "position": "Open Source Contributor",
             "stint": "",
             "stintDate": "",
-            "details": "Logged issues and contributed resolutions through pull requests. Shipped component library updates on npmjs.",
+            "details": "Logged issues and commited resolutions through pull requests. Shipped component library to npm.",
+            "forceWidow": false,
+            "shouldDisplay": true
+        },
+        {
+            "title": "CouchSurfing",
+            "logo": "couchsurfing.png",
+            "position": "Local Ambassador",
+            "stint": "",
+            "stintDate": "",
+            "details": "Moderated community message board. Facilitated local events. CouchSurfer placement management. Hosted the most amazing people across the world.",
             "forceWidow": false,
             "shouldDisplay": true
         }
