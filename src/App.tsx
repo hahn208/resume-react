@@ -256,7 +256,7 @@ function Sidebar()
             </ul>
             <h2><span className={'small-caps'}>Education</span></h2>
             { resumeData.education.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
-            <h2><span className={'small-caps'}>Volunteer</span> <span className={'small-caps'}>Experience</span></h2>
+            <h2><span className={'small-caps'}>Community</span></h2>
             { resumeData.volunteer.map(experienceItem => <ResumeItem experience={experienceItem}/>) }
         </div>
     );
