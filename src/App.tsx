@@ -121,11 +121,9 @@ function ResumeExperience()
                 <h2><span className={'small-caps'}>Experience</span></h2>
                 <section>
                     <div className='background-section'>
-                        <h3>Lead Resume Editor</h3>
-                        <h4><strong>Sabbatical &amp; Job Search</strong></h4>
+                        <h3>Recent Personal Projects</h3>
                     </div>
                     <div className='work-details'>
-                        <p>Course corrected career direction and personal life. Cleared backlog of home maintenance projects. Volunteer work. Portfolio projects to expand skill-set.</p>
                         <div className={'flex'}>
                             <div className={'composable'}>
                                 <h5><a href="https://area-man.vercel.app/" target={'_blank'}>Area Man</a></h5>

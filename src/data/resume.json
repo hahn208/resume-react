@@ -10,9 +10,9 @@
             "title": "Mattress Firm",
             "logo": "mattressfirm.png",
             "position": "Software Engineering Manager",
-            "stint": "May 2021 – Jun 2023 • Remote",
+            "stint": "May 2021 – Jun 2023 • Sep 2024 - Current • Remote",
             "stintDate": "05/2021-06/2023",
-            "details": "__Tech lead and supervisor__ to multiple cross-functional engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • __Pushed quality standards__ in monitoring, automation, and logging • __Delivered solutions__ to leadership when faced with urgent challenges • Millions in __revenue recovered__ with statistical analytics • Component library contributor and publisher • Millions in __revenue generated__ engaging with Business Insight, Product Owner, and Accounting teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __SDLC across 5 teams__ • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice with GQL resolvers__ to Mulesoft APIs • Change control management • Continually improving teams through CI/CD tuning, code reviews, onboarding, knowledge-sharing sessions, 1:1 coaching, and __awful puns__*.",
+            "details": "__Tech lead and supervisor__ to multiple cross-functional engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • __Pushed quality standards__ and best practices in development, testing, automation, and alerting • __Delivered solutions__ to leadership when faced with urgent challenges • Millions in __revenue recovered__ with statistical analytics • Component library contributor and publisher • Millions in __revenue generated__ engaging with Business Insight, Product Owner, and Customer Success teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __software development lifecycle and practices__ across 5 teams • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice connecting GQL__ to Mulesoft APIs • Change control management • Relentlessly fostering team success through CI/CD tuning, code reviews, onboarding, knowledge-sharing sessions, 1:1 coaching, and __awful puns__*.",
             "skills": [
                 "HTML5", "SASS", "ES7", "Node.js", "React.js", "TypeScript", "GraphQL", "Unit Testing", "Cypress", "GIT", "SOLID", "A11Y", "Web Optimization", "Scrum", "Agile", "Design Patterns", "A/B Testing"
             ],
@@ -24,7 +24,7 @@
             "position": "Sr. Full Stack Developer",
             "stint": "Sep 2015 – May 2021 • Boise, Idaho",
             "stintDate": "09/2015-05/2021",
-            "details": "Fastened close client relationships with one-on-one meetings to facilitate product success • Piloted projects given concept / design to fully deployed __mobile-first, ADA compliant, and \"Green\" Lighthouse__ rated sites • __Object oriented__ PHP, custom MySQL queries & __stored procedures__, SASS, ES6 JS, Bootstrap, and HTML5 dev • __Dynamic PDF__ creation • Client dashboard __data visualization__ • Extended the Wordpress platform crafting themes and plugins to enable clients • Culled defects by __modernizing legacy applications__ • Instituted personal __coding standards and disciplines__ • __Mentored__ junior devs and new hires • Detailed setup and maintenance instructions for team __collective knowledge__ capital, ie critical backup systems, massive data batch processing, and deployment playbooks.",
+            "details": "Fastened close client relationships with one-on-one meetings to promote product success • Piloted projects given concept / design to fully deployed __mobile-first, ADA compliant, and \"Green\" Lighthouse__ rated sites • __Object oriented__ PHP, custom MySQL queries & __stored procedures__, SASS, ES6 JS, Bootstrap, and HTML5 dev • __Dynamic PDF__ creation • Client dashboard __data visualization__ • Extended the Wordpress platform crafting themes and plugins to enable clients • Culled defects by __modernizing legacy applications__ • Instituted personal __coding standards and disciplines__ • __Mentored__ junior devs and new hires • Detailed setup and maintenance instructions for team __collective knowledge__ capital, ie critical backup systems, massive data batch processing, and deployment playbooks.",
             "forceWidow": false,
             "skills": ["HTML5", "JavaScript", "jQuery", "Google Chart", "Bootstrap", "CSS3", "PHP", "Wordpress", "RDBMS", "PRC", "MongoDB", "WCAG", "OAuth2", "Linux"],
             "shouldDisplay": true
@@ -35,7 +35,7 @@
             "position": "Software Engineer",
             "stint": "Feb 2020 – Aug 2020 • Remote (contract)",
             "stintDate": "02/2020-08/2020",
-            "details": "Hired for HTML and CSS support I leapt to full stack developer in __Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
+            "details": "Hired for HTML and CSS support I sped to full stack developer in __Java, Handlebars, JavaScript, and LESS__ • __Tooled CMS modules__, enabling the marketing teams to self-manage promotions-- reducing defect risk and increasing time-spend capital • Identified and resolved __XSS vulnerabilities__ • In the short six-month contract: Immersed myself in the tech-stack, __outperformed expectations__ while clearing the two-month user-story backlog, substituted as occasional Scrum Master, and __onboarded replacement hires__.",
             "forceWidow": false,
             "skills": ["HTML5", "JavaScript", "Handlebars", "jQuery", "LESS", "Java", "Tooling", "CMS", "SalesForce", "OWASP"],
             "shouldDisplay": true
@@ -46,7 +46,7 @@
             "position": "Frontend Developer",
             "stint": "Sep 2012 – Aug 2015 • Boise, Idaho",
             "stintDate": "09/2012-08/2015",
-            "details": "__Decreased severe technical debt__ while increasing __site stability__ by eliminating framework shims • Authored user-stories for Scrum team to address general __performance and usability__ issues • Team lead surrogate when required • Conducted __A/B testing__ to measure boosts in conversion • Directed and delivered browser __performance tuning__ to quell high bounce rate by enacting image optimization, dismantled render blocking, factoring out code redundancies, and shed dead code weight • Empowered team with __chrome extension__ and __site tools__ to remove user interface snags on internal CMS and code repo application.",
+            "details": "__Decreased severe technical debt__ while increasing __site stability__ by eliminating framework shims • Authored user-stories to address __performance and usability__ issues • Team lead surrogate when required • Conducted __A/B testing__ to measure boosts in conversion • Directed and delivered browser __performance tuning__ to quell high bounce rate by enacting image optimization, dismantled render blocking, factoring out code redundancies, and shed dead code weight • Empowered team with __chrome extension__ and __site tools__ to remove user interface snags on internal CMS and code repo application.",
             "forceWidow": false,
             "skills": ["HTML", "JavaScript", "jQuery", "SVN", "A/B Testing", "SQL"],
             "shouldDisplay": true
@@ -93,7 +93,7 @@
             "position": "Blood Donor",
             "stint": "",
             "stintDate": "",
-            "details": "Since 2019, I have given over 12\u00a0liters of blood.",
+            "details": "Since 2019, I have given over 15\u00a0liters of blood.",
             "forceWidow": false,
             "shouldDisplay": true
         },
