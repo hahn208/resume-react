@@ -155,13 +155,13 @@ section
     .App
     {
         grid-template-areas:
-        'sidebar bio'
-        'sidebar experience';
+        'bio sidebar'
+        'experience sidebar';
     }
 
     .grid-area-sidebar
     {
-        width: 2.2in;
+        width: 2.6in;
     }
 
     p {
@@ -203,13 +203,13 @@ section
     .App
     {
         grid-template-areas:
-        'sidebar bio'
-        'sidebar experience';
+        'bio sidebar'
+        'experience sidebar';
     }
 
     .grid-area-sidebar
     {
-        width: 2.55in;
+        width: 2.75in;
     }
 }
 

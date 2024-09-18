@@ -10,11 +10,11 @@
             "title": "Mattress Firm",
             "logo": "mattressfirm.png",
             "position": "Software Engineering Manager",
-            "stint": "May 2021 – Jun 2023 • Sep 2024 - Current • Remote",
+            "stint": "May 2021 – Jun 2023 • Sep 2024 - Present • Remote",
             "stintDate": "05/2021-06/2023",
             "details": "__Tech lead and supervisor__ to multiple cross-functional engineering teams with 20+ internationally distributed reports • __Individually contributed__ to power the transition from Salesforce to Microsoft D365 • __Pushed quality standards__ and best practices in development, testing, automation, and alerting • __Delivered solutions__ to leadership when faced with urgent challenges • Millions in __revenue recovered__ with statistical analytics • Component library contributor and publisher • Millions in __revenue generated__ engaging with Business Insight, Product Owner, and Customer Success teams • __Reducing MTTR__ by mobilizing tiger teams • __Increased MTBF__ with system resiliency • Shaped and piloted the __software development lifecycle and practices__ across 5 teams • Azure cloud server __production deployments__ executed bi-weekly and on demand • Led rebuild of My Account to introduce __Typescript microservice connecting GQL__ to Mulesoft APIs • Change control management • Relentlessly fostering team success through CI/CD tuning, code reviews, onboarding, knowledge-sharing sessions, 1:1 coaching, and __awful puns__*.",
             "skills": [
-                "HTML5", "SASS", "ES7", "Node.js", "React.js", "TypeScript", "GraphQL", "Unit Testing", "Cypress", "GIT", "SOLID", "A11Y", "Web Optimization", "Scrum", "Agile", "Design Patterns", "A/B Testing"
+                "HTML5", "SASS", "ES7", "Node.js", "React.js", "TypeScript", "GraphQL", "Unit Testing", "Playwright", "GIT", "SOLID", "A11Y", "Scrum", "Agile", "Design Patterns", "A/B Testing"
             ],
             "shouldDisplay": true
         },
