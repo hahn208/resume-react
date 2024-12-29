@@ -1,3 +1,4 @@
 steps:
-  - label: "Example Test"
-    command: echo "Hello!"
+  - label: ":tophat: Build"
+    command: "npm run build"
+    key: build
