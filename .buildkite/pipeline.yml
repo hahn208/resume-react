@@ -1,4 +1,14 @@
 steps:
   - label: ":tophat: Build"
-    command: "npm run build"
+    command: echo "Hey BuildKite-- Hire me!"
+    
+  - label: "Install dependencies"
+    command: npm ci
+    key: zuul
+    
+  - label: "Spaghettification"
+    command: npm run build
     key: build
+  
+  - label: "Ship it!"
+    command: echo "SOON"
