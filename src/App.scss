@@ -155,8 +155,8 @@ section
     .App
     {
         grid-template-areas:
-        'bio sidebar'
-        'experience sidebar';
+        'sidebar bio'
+        'sidebar experience';
     }
 
     .grid-area-sidebar
@@ -203,8 +203,8 @@ section
     .App
     {
         grid-template-areas:
-        'bio sidebar'
-        'experience sidebar';
+        'sidebar bio'
+        'sidebar experience';
     }
 
     .grid-area-sidebar

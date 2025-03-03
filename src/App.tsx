@@ -42,7 +42,7 @@ const obfuscateTelNumber = (telNumber: string) => {
 
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
-    'intro': <p>Congenital engineer • Designed and implemented <a href={'https://idahohahn.com/Resume/geo-flowchart.jpg'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.<br/><br/><em>Full stack software engineer</em> adept at <em>management</em> • <em>Adapts</em> to times of urgent revenue bleed to methodical epic development • Wholly invested in company, product, and <em>team health</em>.</p>,
+    'intro': <p><strong><a href={'https://www.idahohahn.com/nz-aewv-support-letter.pdf'}>Immigration advisor letter of attestation</a></strong><br/><br/>Congenital engineer • Designed and implemented <a href={'https://www.idahohahn.com/Resume/geo-flowchart.png'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.<br/><br/><em>Engineering Supervisor</em> adept at <em>software development</em> • <em>Adapts</em> to times of urgent revenue bleed to methodical epic development • Obstinately invested in company, product, and <em>team health</em>.</p>,
     'address': <span>208.ha<span className={'no-spam'}>tldr</span>hn&#64;gmail&#46;com<br />{ process.env.REACT_APP_TEL_ENABLE === 'true' ? obfuscateTelNumber(process.env.REACT_APP_TEL_NUMBER as string) : '' }Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
@@ -126,27 +126,27 @@ function ResumeExperience()
                     <div className='work-details'>
                         <div className={'flex'}>
                             <div className={'composable'}>
-                                <h5><a href="https://area-man.vercel.app/" target={'_blank'}>Area Man</a></h5>
+                                <h5><a href="https://area-man.vercel.app/" target={'_blank'} rel={'noreferrer'}>Area Man</a></h5>
                                 <ul className={'skills-list'}>
                                     <li>Typescript</li>
                                     <li>Next.js</li>
                                     <li>Tailwind</li>
                                     <li>OpenAI</li>
                                 </ul>
-                                <h5><a href="https://idahohahn.com/BubbleFort/" target={'_blank'}>BubbleFort</a></h5>
+                                <h5><a href="https://idahohahn.com/BubbleFort/" target={'_blank'} rel={'noreferrer'}>BubbleFort</a></h5>
                                 <ul className="skills-list">
                                     <li>Javascript</li>
                                     <li>D3.js</li>
                                 </ul>
                             </div>
                             <div className={'composable'}>
-                                <h5><a href="https://github.com/hahn208/aisleSort" target={'_blank'}>Aisle Sort</a></h5>
+                                <h5><a href="https://github.com/hahn208/aisleSort" target={'_blank'} rel={'noreferrer'}>Aisle Sort</a></h5>
                                 <ul className="skills-list">
                                     <li>Golang</li>
                                 </ul>
                                 <h5><a
                                     href="https://www.linkedin.com/pulse/code-motion-driving-leds-python-andrew-hahn-zzs3c/"
-                                    target={'_blank'}>Code In Motion</a></h5>
+                                    target={'_blank'} rel={'noreferrer'}>Code In Motion</a></h5>
                                 <ul className="skills-list">
                                     <li>Python</li>
                                     <li>WebSockets</li>
