@@ -1,6 +1,6 @@
-import { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import resume from './data/resume.json';
-import './App.scss';
+import './style.css';
 
 interface ExperienceType {
     title: string,
@@ -24,15 +24,6 @@ interface ResumeData {
 
 let resumeData = resume as ResumeData;
 
-/**
- * Import references if the file exists.
- */
-let referral:  { [key: string]: string } = {};
-try {
-    process.env.REACT_APP_ENABLE_REF === 'true' && (referral = require('./data/job_reference.json'));
-}
-catch (e) { /*noop*/ }
-
 const obfuscateTelNumber = (telNumber: string) => {
     const noSpam = <span className={'no-spam'}>4321</span>;
     
@@ -41,9 +32,9 @@ const obfuscateTelNumber = (telNumber: string) => {
 }
 
 const bio: { [key: string]: ReactNode } = {
-    'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span> <small>(He/Him)</small></h1>,
-    'intro': <p><strong><a href={'https://www.idahohahn.com/nz-aewv-support-letter.pdf'}>Immigration advisor letter of attestation</a></strong><br/><br/>Congenital engineer • Designed and implemented <a href={'https://www.idahohahn.com/Resume/geo-flowchart.png'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.<br/><br/><em>Engineering Supervisor</em> adept at <em>software development</em> • <em>Adapts</em> to times of urgent revenue bleed to methodical epic development • Obstinately invested in company, product, and <em>team health</em>.</p>,
-    'address': <span>208.ha<span className={'no-spam'}>tldr</span>hn&#64;gmail&#46;com<br />{ process.env.REACT_APP_TEL_ENABLE === 'true' ? obfuscateTelNumber(process.env.REACT_APP_TEL_NUMBER as string) : '' }Boise, Idaho USA</span>,
+    'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span>&nbsp;<small>(He/Him)</small></h1>,
+    'intro': <p><strong><a href={'https://www.idahohahn.com/nz-aewv-support-letter.pdf'}>Immigration advisor letter of attestation</a></strong><br/><br/>Congenital engineer • Designed and implemented <a href={'https://www.idahohahn.com/Resume/geo-flowchart.png'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.<br/><br/><em>Engineering Supervisor</em> adept at <em>software development</em> • <em>Adapts</em> to times of urgent revenue bleed to methodical epic development • 100% invested in company, product, and <em>team health</em>.</p>,
+    'address': <span>208.ha<span className={'no-spam'}>tldr</span>hn&#64;gmail&#46;com<br/>{import.meta.env.VITE_TEL_ENABLE === 'true' ? obfuscateTelNumber(import.meta.env.VITE_TEL_NUMBER as string) : ''}Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
 
@@ -86,7 +77,7 @@ function ResumeItem({experience}: { experience: ExperienceType })
 
     if(experience.logo)
     {
-        experienceImage = require(`./images/${experience.logo}`);
+        experienceImage = `./images/${experience.logo}`;
         experienceImage = <div className='company-logo'><img src={experienceImage} className={'company-logo_img'} alt={experience.title && experience.title}/></div>;
     }
 
@@ -101,8 +92,6 @@ function ResumeItem({experience}: { experience: ExperienceType })
                 <p dangerouslySetInnerHTML={{ __html: emphasis(experience.details)}}></p>
             </div>
             { experience.skills && <ul className={'skills-list'}>{experience.skills.map(s => <li key={makeSafeKeyString(s)}>{s}</li> )}</ul> }
-            { /** If the json file exists, display the referral that matches the company **/ }
-            { referral.hasOwnProperty(experience.title) ? <h6 dangerouslySetInnerHTML={{ __html: referral[experience.title]}}></h6> : '' }
         </section>
     );
 }
@@ -173,8 +162,8 @@ function ResumeBio() {
             <>
                 {bio.title}
                 <section>
-                    <>{/* require().default needed because webpack doesn't load svg file types inherently */}
-                        {bio.intro}<p><a href='https://github.com/hahn208/' target='_blank' rel={'noreferrer'}><img src={require('./images/github-ico-dark.svg').default} height={31} width={31} alt={'Github account- Andrew Hahn'} /></a>&nbsp;<a href='https://www.linkedin.com/in/208hahn/' target='_blank' rel={'noreferrer'}><img src={require('./images/linkedin-ico.svg').default} height={32} width={32} alt={'LinkedIn account- Andrew Hahn'} /></a></p>
+                    <>
+                        {bio.intro}<p className={'d-print-none'}><a href='https://github.com/hahn208/' target='_blank' rel={'noreferrer'}><img src='/images/github-ico-dark.svg' height={31} width={31} alt={'Github account- Andrew Hahn'}/></a>&nbsp;<a href='https://www.linkedin.com/in/208hahn/' target='_blank' rel={'noreferrer'}><img src='/images/linkedin-ico.svg' height={32} width={32} alt={'LinkedIn account- Andrew Hahn'}/></a></p>
                     </>
                 </section>
             </>
@@ -182,29 +171,51 @@ function ResumeBio() {
     )
 }
 
-function IdahoTime() {
+const IdahoTime = () => {
     /**
      * Return the current time, to the minute only, in Boise.
      * @return string
      */
-    const getIdahoTime = useCallback(() => new Intl.DateTimeFormat('en-GB', { month: 'short', day: 'numeric', year:'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'America/Boise', hour12: true }).format(new Date()), []);
+    const getIdahoTime = useCallback(() => {
+        const now = new Intl.DateTimeFormat('en-GB', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            timeZone: 'America/Boise',
+            hour12: true
+        }).format(new Date());
+
+        setIdahoTime(now);
+    }, []);
 
     // Create a ref for the interval timer, so it can be cleared later.
-    let idahoTimePendulum: MutableRefObject<NodeJS.Timer | false> = useRef(false);
+    const idahoTimePendulum = useRef<number | null>(null);
     
     /* Create a state variable and setter for the time display */
-    const [idahoTime, setIdahoTime] = useState(getIdahoTime());
+    const [idahoTime, setIdahoTime] = useState(
+        () =>  new Intl.DateTimeFormat('en-GB', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            timeZone: 'America/Boise',
+            hour12: true
+        }).format(new Date())
+    );
     
     // Avoid rendering the time before hydration. Only run once.
     useEffect(
         () => {
             // In Dev mode this might render twice. Prevent multiple intervals from being created.
-            if(!idahoTimePendulum.current)
-                idahoTimePendulum.current = setInterval(() => { setIdahoTime(getIdahoTime()) }, 5000);
+            idahoTimePendulum.current = setInterval(getIdahoTime, 5000);
+
             // Return a callback function when the component is unmounted so the interval is cleared.
             return () => { 
-                if(idahoTimePendulum.current) clearInterval(idahoTimePendulum.current);
-                idahoTimePendulum.current = false;
+                if (idahoTimePendulum.current !== null)
+                    clearInterval(idahoTimePendulum.current);
             };
         },
         [getIdahoTime]
@@ -234,10 +245,11 @@ function Sidebar()
 
     return (
         <div className={'grid-area-sidebar'}>
-            <img src={require('./images/profile.jpg')} alt='Andrew Hahn with son' className={'d-print-none'} style={{'width': '100%'}}/>
+            <img src='/images/profile.jpg' alt='Andrew Hahn with son' className={'d-print-none'}
+                 style={{ 'width': '100%' }}/>
             <section className={'mb-2 print-t-0'}>
                 <div className={'flex gap-4'}>
-                    <img src={require('./images/ah.png')} alt={'AH'} id={'AH'}/>
+                    <img src='/images/ah.png' alt={'AH'} id={'AH'}/>
                     <div>
                         <p>
                             {bio.address}<br/>
