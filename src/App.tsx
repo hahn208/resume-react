@@ -163,7 +163,7 @@ function ResumeBio() {
                 {bio.title}
                 <section>
                     <>
-                        {bio.intro}<p className={'d-print-none'}><a href='https://github.com/hahn208/' target='_blank' rel={'noreferrer'}><img src='/images/github-ico-dark.svg' height={31} width={31} alt={'Github account- Andrew Hahn'}/></a>&nbsp;<a href='https://www.linkedin.com/in/208hahn/' target='_blank' rel={'noreferrer'}><img src='/images/linkedin-ico.svg' height={32} width={32} alt={'LinkedIn account- Andrew Hahn'}/></a></p>
+                        {bio.intro}<p className={'d-print-none'}><a href='https://github.com/hahn208/' target='_blank' rel={'noreferrer'}><img src='./images/github-ico-dark.svg' height={31} width={31} alt={'Github account- Andrew Hahn'}/></a>&nbsp;<a href='https://www.linkedin.com/in/208hahn/' target='_blank' rel={'noreferrer'}><img src='./images/linkedin-ico.svg' height={32} width={32} alt={'LinkedIn account- Andrew Hahn'}/></a></p>
                     </>
                 </section>
             </>
@@ -245,11 +245,11 @@ function Sidebar()
 
     return (
         <div className={'grid-area-sidebar'}>
-            <img src='/images/profile.jpg' alt='Andrew Hahn with son' className={'d-print-none'}
+            <img src='./images/profile.jpg' alt='Andrew Hahn with son' className={'d-print-none'}
                  style={{ 'width': '100%' }}/>
             <section className={'mb-2 print-t-0'}>
                 <div className={'flex gap-4'}>
-                    <img src='/images/ah.png' alt={'AH'} id={'AH'}/>
+                    <img src='./images/ah.png' alt={'AH'} id={'AH'}/>
                     <div>
                         <p>
                             {bio.address}<br/>
