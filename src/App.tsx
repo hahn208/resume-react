@@ -33,7 +33,7 @@ const obfuscateTelNumber = (telNumber: string) => {
 
 const bio: { [key: string]: ReactNode } = {
     'title': <h1><span className={'small-caps'}>Andrew</span> <span className={'small-caps'}>Hahn</span>&nbsp;<small>(He/Him)</small></h1>,
-    'intro': <p><strong><a href={'https://www.idahohahn.com/nz-aewv-support-letter.pdf'}>Immigration advisor letter of attestation</a></strong><br/><br/>Congenital engineer • Designed and implemented <a href={'https://www.idahohahn.com/Resume/geo-flowchart.png'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.<br/><br/><em>Engineering Supervisor</em> adept at <em>software development</em> • <em>Adapts</em> to times of urgent revenue bleed to methodical epic development • 100% invested in company, product, and <em>team health</em>.</p>,
+    'intro': <p>Congenital engineer • Designed and implemented <a href={'https://www.idahohahn.com/Resume/geo-flowchart.png'} target={'_blank'} rel={'noreferrer'}>home geothermal heating system</a>&nbsp;•&nbsp;Cultivated <em>scores</em> of sourdough bread loaves • Sired the cutest/dorkiest child of the Hahn lineage.<br/><br/><em>Engineering Supervisor</em> adept at <em>software development</em> • <em>Adapts</em> to times of urgent revenue bleed to methodical epic development • 100% invested in company, product, and <em>team health</em>.</p>,
     'address': <span>208.ha<span className={'no-spam'}>tldr</span>hn&#64;gmail&#46;com<br/>{import.meta.env.VITE_TEL_ENABLE === 'true' ? obfuscateTelNumber(import.meta.env.VITE_TEL_NUMBER as string) : ''}Boise, Idaho USA</span>,
     'slogan': <p>Heads together <strong>we endeavor.</strong></p>
 };
